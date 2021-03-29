@@ -10,6 +10,7 @@
         <module name="automation.toplyvo" />
         <module name="toplyvo.automation" />
         <module name="auto1" />
+        <module name="Toplyvo-automation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="15" />
