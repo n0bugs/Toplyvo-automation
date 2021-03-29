@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PROD SMOKE TEST" parallel = "tests" thread-count="2">
+
+    <test name="Samsung  A30S">
+
+        <parameter name="device" value="Samsung  A30S" />
+        <parameter name="server" value="prod"/>
+
+        <classes>
+
+            <class name="tests.Fuel.buycreditcardTest" />
+            <!--            <class name="tests.Authorization.loginTest" />-->
+            <!--            <class name="tests.Fuel.buyfuelTest" />-->
+            <!--            <class name="tests.Vignette.vignettePayTest" />-->
+
+        </classes>
+
+    </test>
+
+    <test name="Samsung  SM-J730F">
+
+        <parameter name="device" value="Samsung  SM-J730F" />
+        <parameter name="server" value="prod"/>
+        <classes>
+
+            <class name="tests.Fuel.buycreditcardTest" />
+<!--            <class name="tests.Authorization.loginTest" />-->
+<!--            <class name="tests.Fuel.buyfuelTest" />-->
+<!--            <class name="tests.Vignette.vignettePayTest" />-->
+
+        </classes>
+
+    </test>
+
+    <!-- Test -->
+</suite> <!-- Suite -->

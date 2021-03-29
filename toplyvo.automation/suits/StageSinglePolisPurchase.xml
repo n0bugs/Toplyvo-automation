@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Single Smoke test">
+    <test name="BUY POLIS TEST for Samsung  A30S">
+
+        <parameter name="device" value="Samsung  A30S" />
+        <parameter name="server" value="stage"/>
+
+        <classes>
+            <class name="tests.Insurance.buyPolisFullFilledTest" />
+            <class name ="tests.Insurance.buyPolisTest"/>
+        </classes>
+    </test>
+</suite>

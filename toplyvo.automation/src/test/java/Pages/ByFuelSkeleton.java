@@ -1,0 +1,80 @@
+package Pages;
+
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.actions;
+
+public class ByFuelSkeleton {
+    public SelenideElement btnBuyFuel = $(By.xpath("/hierarchy/android.widget.FrameLayout" +
+            "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/" +
+            "android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.TextView"));
+
+    public SelenideElement btnContinue = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView"));
+
+
+    public SelenideElement sunoilID = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Sunoil\"]/android.widget.TextView"));
+
+    public SelenideElement MottiSID = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Motto\"]/android.widget.TextView"));
+
+    public SelenideElement oviS = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Ovis\"]/android.widget.TextView"));
+
+    public SelenideElement btnOvis = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/" +
+            "androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[8]/android.widget.LinearLayout"));
+
+    public SelenideElement plusBtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "androidx.recyclerview.widget.RecyclerView/" +
+            "android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/" +
+            "android.widget.ImageView"));
+
+    public SelenideElement btnBuyFuel2 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/android.widget.TextView"));
+
+    public SelenideElement netTabletochci = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
+
+    public SelenideElement choosePayment = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView"));
+
+    public SelenideElement personalMoney = $(By.xpath("/hierarchy/android.widget.FrameLayout/a" +
+            "ndroid.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/a" +
+            "ndroid.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/an" +
+            "droid.widget.RelativeLayout/android.widget.LinearLayout/android.view.ViewGroup/andr" +
+            "oid.widget.TextView"));
+
+    public SelenideElement confirmPurchase = $(By.id("ua.fuel.debug:id/tv_pay_tickets"));
+
+    public SelenideElement verifyPurchase = $(By.id("ua.fuel.debug:id/snackbar_text"));
+
+    public void BuyFuel() {
+        btnBuyFuel.shouldBe(Condition.visible).click();
+        btnContinue.click();
+        actions().moveToElement(sunoilID).click(MottiSID).perform();
+        oviS.click();
+        btnOvis.click();
+        plusBtn.click();
+        btnBuyFuel2.click();
+//        netTabletochci.shouldBe(visible).click();
+        choosePayment.click();
+    }
+}

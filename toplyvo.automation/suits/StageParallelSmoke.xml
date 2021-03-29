@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PARRALEL SMOKE TEST" parallel = "tests" thread-count="2">
+
+    <test name="Samsung  A30S">
+
+        <parameter name="device" value="Samsung  A30S" />
+        <parameter name="server" value="stage"/>
+
+        <classes>
+
+            <class name="tests.Vignette.vignetteNegativeTest" />
+
+        </classes>
+
+    </test>
+
+    <test name="Samsung  SM-J730F">
+
+        <parameter name="device" value="Samsung  SM-J730F" />
+        <parameter name="server" value="stage"/>
+
+        <classes>
+
+            <class name="tests.Bonuses.bonusesThermsCheck" />
+
+        </classes>
+
+    </test>
+
+    <!-- Test -->
+</suite> <!-- Suite -->
