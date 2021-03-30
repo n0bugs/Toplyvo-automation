@@ -46,10 +46,9 @@ public class ByFuelSkeleton {
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.TextView"));
 
-    public SelenideElement netTabletochci = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
-            "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
+    public SelenideElement tabl_net = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
 
     public SelenideElement choosePayment = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
@@ -74,7 +73,7 @@ public class ByFuelSkeleton {
         btnOvis.click();
         plusBtn.click();
         btnBuyFuel2.click();
-//        netTabletochci.shouldBe(visible).click();
+        tabl_net.shouldBe(visible).click();
         choosePayment.click();
     }
 }
