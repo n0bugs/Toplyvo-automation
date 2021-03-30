@@ -73,7 +73,6 @@ public class ByFuelSkeleton {
         btnOvis.click();
         plusBtn.click();
         btnBuyFuel2.click();
-//
         tabl_net.shouldBe(visible).click();
         choosePayment.click();
     }
