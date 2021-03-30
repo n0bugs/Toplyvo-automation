@@ -4,12 +4,9 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import Sandbox.Sample;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -19,7 +16,7 @@ import io.appium.java_client.android.AndroidDriver;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
+
 
 public class AndroidSetUp {
     private static final String KEY = "server";
