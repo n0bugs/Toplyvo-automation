@@ -6,15 +6,15 @@
         <parameter name="server" value="stage"/>
 
         <classes>
-<!--            <class name="tests.Profile.CheckRefferalPerson" />-->
-<!--            <class name="tests.Profile.DeleteBankCardTest" />-->
-<!--            <class name="tests.Fuel.TicketAddArchiveTest" />-->
-<!--            <class name="tests.Fuel.AddTicketActive" />-->
+            <class name="tests.Profile.CheckRefferalPerson" />
+            <class name="tests.Profile.DeleteBankCardTest" />
+            <class name="tests.Fuel.TicketAddArchiveTest" />
+            <class name="tests.Fuel.AddTicketActive" />
             <class name="tests.Authorization.LogautTest" />
-<!--            <class name="tests.Authorization.negativeLoginTest" />-->
-<!--            <class name="tests.Authorization.loginTest" />-->
-<!--            <class name="tests.Fuel.buyfuelTest" />-->
-<!--            <class name="tests.Vignette.vignettePayTest" />-->
+            <class name="tests.Authorization.negativeLoginTest" />
+            <class name="tests.Authorization.loginTest" />
+            <class name="tests.Fuel.buyfuelTest" />
+            <class name="tests.Vignette.vignettePayTest" />
         </classes>
     </test>
 </suite>
