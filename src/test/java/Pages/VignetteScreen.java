@@ -36,10 +36,9 @@ public class VignetteScreen extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView[1]/android.widget.RelativeLayout[3]/android.widget.ImageView[2]"));
 
-    public SelenideElement info_driver_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/" +
-            "androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[5]"));
+    public SelenideElement info_driver_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.ScrollView/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[7]"));
 
     public SelenideElement tap_purchase_button = $(By.id("ua.fuel.debug:id/orderVignetteTV"));
 
