@@ -1,6 +1,7 @@
 package Pages;
 
 import Helpers.RandomCarNumber;
+import Helpers.SwipeHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
@@ -178,7 +179,66 @@ public class PolisPageFullFilled extends AndroidSetUp {
 
     private SelenideElement title_header = $(By.id("ua.fuel.debug:id/title_tv"));
 
+//    Тут Локаторы для некоректного ввода
 
+    private SelenideElement tap_insurer_name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/" +
+            "android.widget.FrameLayout/android.widget.TextView"));
+
+    private SelenideElement incorect_name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout/" +
+            "android.widget.EditText"));
+
+
+    private SelenideElement fill_name_field = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText"));
+
+    public SelenideElement verify_error_fill_name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.TextView[1]"));
+
+    public SelenideElement inn_field = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
+            "android.widget.EditText"));
+
+    public SelenideElement cont_btn_after_fill_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[3]"));
+
+    public SelenideElement error_check_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout"));
+
+    public SelenideElement birthDayLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.widget.TextView"));
+
+    public SelenideElement yearLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.widget.DatePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
+            "android.widget.TextView[1]"));
+
+    public SelenideElement year_18 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/android.widget.LinearLayout/" +
+            "android.widget.ScrollView/android.widget.ViewAnimator/android.widget.ListView/android.widget.TextView[8]"));
+
+    public SelenideElement confirm_year = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.Button[2]"));
 
     public void stepBuyPolis() {
         tapUslugi.shouldBe(Condition.visible).click();
@@ -226,5 +286,54 @@ public class PolisPageFullFilled extends AndroidSetUp {
         send_email_polis.shouldBe(visible).sendKeys("melnikm078@gmail.com");
         confirm_send_email.shouldBe(visible).click();
 //        title_header.shouldBe(visible);
+    }
+
+    public void skeleton_full_filled(){
+        auto_mark_filled.click();
+        inputET.click();
+        inputET.sendKeys("Lin");
+        selector_auto_tap.shouldBe(visible).click();
+        auto_model_filled.click();
+        auto_model_filled_aviator.shouldBe(visible).click();
+        type_car_global.shouldBe(visible).click();
+        choose_car_type.click();
+        vin_code_tap.shouldBe(visible).click();
+        vin_code_fill.shouldBe(visible).sendKeys("VSKTVUR20U02226389");
+        save_vin_code.shouldBe(visible).click();
+        save_date_auto.shouldBe(visible).click();
+        choose_franshize.shouldBe(visible).click();
+        choose_franshize_money.shouldBe(visible).click();
+    }
+
+    public void incorectName(){
+        tap_insurer_name.shouldBe(visible).click();
+        incorect_name.shouldBe(visible).clear();
+        fill_name_field.shouldBe(visible).click();
+        fill_name_field.shouldBe(visible).sendKeys("Ыван");
+        verify_error_fill_name.shouldBe(visible);
+    }
+
+    public void Incorect_INN(){
+        tap_insurer_name.shouldBe(visible).click();
+        inn_field.shouldBe(visible).clear();
+        inn_field.shouldBe(visible).sendKeys("1111111111");
+        cont_btn_after_fill_inn.shouldBe(visible).click();
+        payment_button_polis.shouldBe(visible).click();
+        error_check_inn.shouldBe(visible);
+    }
+
+    public void Incorect_day_birth(){
+        tap_insurer_name.shouldBe(visible).click();
+        birthDayLocator.shouldBe(visible).click();
+        yearLocator.shouldBe(visible).click();
+        SwipeHelper atSwipeHelper = new SwipeHelper();
+        atSwipeHelper.DownSwipe1();
+        atSwipeHelper.DownSwipe1();
+        atSwipeHelper.DownSwipe1();
+        year_18.shouldBe(visible).click();
+        confirm_year.shouldBe(visible).click();
+        cont_btn_after_fill_inn.shouldBe(visible).click();
+        payment_button_polis.shouldBe(visible).click();
+        error_check_inn.shouldBe(visible);
     }
 }
