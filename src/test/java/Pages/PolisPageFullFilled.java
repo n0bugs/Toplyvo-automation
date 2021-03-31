@@ -206,6 +206,20 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.TextView[1]"));
 
+    public SelenideElement inn_field = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
+            "android.widget.EditText"));
+
+    public SelenideElement cont_btn_after_fill_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[3]"));
+
+    public SelenideElement error_check_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout"));
+
 
 
     public void stepBuyPolis() {
@@ -255,7 +269,8 @@ public class PolisPageFullFilled extends AndroidSetUp {
         confirm_send_email.shouldBe(visible).click();
 //        title_header.shouldBe(visible);
     }
-    public void incorectName(){
+
+    public void skeleton_full_filled(){
         auto_mark_filled.click();
         inputET.click();
         inputET.sendKeys("Lin");
@@ -270,14 +285,23 @@ public class PolisPageFullFilled extends AndroidSetUp {
         save_date_auto.shouldBe(visible).click();
         choose_franshize.shouldBe(visible).click();
         choose_franshize_money.shouldBe(visible).click();
+    }
 
+    public void incorectName(){
         tap_insurer_name.shouldBe(visible).click();
         incorect_name.shouldBe(visible).clear();
         fill_name_field.shouldBe(visible).click();
         fill_name_field.shouldBe(visible).sendKeys("Ыван");
         verify_error_fill_name.shouldBe(visible);
+    }
 
-
+    public void Incorect_INN(){
+        tap_insurer_name.shouldBe(visible).click();
+        inn_field.shouldBe(visible).clear();
+        inn_field.shouldBe(visible).sendKeys("1111111111");
+        cont_btn_after_fill_inn.shouldBe(visible).click();
+        payment_button_polis.shouldBe(visible).click();
+        error_check_inn.shouldBe(visible);
 
     }
 }

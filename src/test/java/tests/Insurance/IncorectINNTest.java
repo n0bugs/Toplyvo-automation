@@ -1,6 +1,5 @@
 package tests.Insurance;
 
-
 import Pages.PolisPageFullFilled;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
@@ -16,13 +15,14 @@ import java.net.MalformedURLException;
 @Feature("Buy polis full filled/error check")
 @Severity(SeverityLevel.CRITICAL)
 @Test
-public class IncorectNameTest extends AndroidSetUp {
+public class IncorectINNTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     public PolisPageFullFilled atPolisPage = new PolisPageFullFilled();
 
+
     @Parameters({"server"})
-    @Story("Check Buy polis incorect name field")
-    public void IncorectBuyPolisName(String server) throws MalformedURLException, InterruptedException {
+    @Story("Check Buy polis incorect INN field")
+    public void IncorectBuyPolisINN(String server) throws MalformedURLException, InterruptedException {
 // Логин
         atLoginInter.interSwitch(server);
 // Степы покупки полисов
@@ -31,7 +31,6 @@ public class IncorectNameTest extends AndroidSetUp {
 //      Скелетон для покупки полиса
         atPolisPage.skeleton_full_filled();
 //        Не корректно указывается поле Имя
-        atPolisPage.incorectName();
+        atPolisPage.Incorect_INN();
     }
 }
-
