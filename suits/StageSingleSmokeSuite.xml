@@ -6,6 +6,7 @@
         <parameter name="server" value="stage"/>
 
         <classes>
+            <class name="tests.Insurance.IncorectBirthTest" />
             <class name="tests.Insurance.IncorectINNTest" />
             <class name="tests.Insurance.IncorectNameTest" />
             <class name="tests.Profile.CheckRefferalPerson" />
