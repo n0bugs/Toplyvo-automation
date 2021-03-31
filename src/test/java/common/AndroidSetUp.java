@@ -4,12 +4,10 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import Sandbox.Sample;
+
+import Helpers.AllureEnv;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -95,13 +93,13 @@ public class AndroidSetUp {
     @AfterSuite
     @Parameters({"server"})
     public void generalEnv(String server) throws MalformedURLException, InterruptedException, Exception{
-        Sample atSample = new Sample();
+        AllureEnv atAllureEnv = new AllureEnv();
         String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
         System.out.println("server is eq = " + value);
         if (value.equalsIgnoreCase("stage")){
-            atSample.envStage();
+            atAllureEnv.envStage();
         }else{
-            atSample.envProd();
+            atAllureEnv.envProd();
         }
     }
 
