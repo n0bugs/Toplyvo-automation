@@ -50,30 +50,42 @@ public class ByFuelSkeleton {
             "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
 
-    public SelenideElement choosePayment = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView"));
+    public SelenideElement choosePayment = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ImageView\n"));
 
-    public SelenideElement personalMoney = $(By.xpath("/hierarchy/android.widget.FrameLayout/a" +
-            "ndroid.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/a" +
-            "ndroid.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/an" +
-            "droid.widget.RelativeLayout/android.widget.LinearLayout/android.view.ViewGroup/andr" +
-            "oid.widget.TextView"));
+
+    public SelenideElement netTabletochciPositive = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[1]"));
 
     public SelenideElement confirmPurchase = $(By.id("ua.fuel.debug:id/tv_pay_tickets"));
 
-    public SelenideElement verifyPurchase = $(By.id("ua.fuel.debug:id/snackbar_text"));
+
+
 
     public void BuyFuel() {
         btnBuyFuel.shouldBe(Condition.visible).click();
         btnContinue.click();
-        actions().moveToElement(sunoilID).click(MottiSID).perform();
+        MottiSID.click();
         oviS.click();
         btnOvis.click();
         plusBtn.click();
         btnBuyFuel2.click();
-        tabl_net.shouldBe(visible).click();
+        netTabletochci.shouldBe(visible).click();
+        choosePayment.click();
+    }
+
+    public void BuyFuelTablPositive() {
+        btnBuyFuel.shouldBe(Condition.visible).click();
+        btnContinue.click();
+        MottiSID.click();
+        oviS.click();
+        btnOvis.click();
+        plusBtn.click();
+        btnBuyFuel2.click();
+        netTabletochciPositive.shouldBe(visible).click();
         choosePayment.click();
     }
 }

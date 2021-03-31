@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import Sandbox.Sample;
+import Helpers.AllureEnv;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.appium.java_client.AppiumDriver;
@@ -92,13 +92,13 @@ public class AndroidSetUp {
     @AfterSuite
     @Parameters({"server"})
     public void generalEnv(String server) throws MalformedURLException, InterruptedException, Exception{
-        Sample atSample = new Sample();
+        AllureEnv atAllureEnv = new AllureEnv();
         String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
         System.out.println("server is eq = " + value);
         if (value.equalsIgnoreCase("stage")){
-            atSample.envStage();
+            atAllureEnv.envStage();
         }else{
-            atSample.envProd();
+            atAllureEnv.envProd();
         }
     }
 
