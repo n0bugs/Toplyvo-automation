@@ -82,4 +82,16 @@ public class SwipeHelper extends AndroidSetUp{
                 .release()
                 .perform();
     }
+
+    public void DownSwipe1() {
+        PointOption point = new PointOption();
+        point.withCoordinates(363, 1002);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(369, 557);
+        (new TouchAction(driver))
+                .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
 }
