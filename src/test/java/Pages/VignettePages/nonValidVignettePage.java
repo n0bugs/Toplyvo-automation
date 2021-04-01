@@ -1,4 +1,4 @@
-package Pages;
+package Pages.VignettePages;
 
 import Helpers.RandomCarNumber;
 import com.codeborne.selenide.SelenideElement;

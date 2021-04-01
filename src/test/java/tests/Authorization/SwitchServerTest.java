@@ -1,6 +1,5 @@
 package tests.Authorization;
 
-import Pages.LoginPage;
 import Helpers.SwitchServer;
 import common.AndroidSetUp;
 import org.testng.annotations.Test;

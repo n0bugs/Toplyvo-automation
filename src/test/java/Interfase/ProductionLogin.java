@@ -1,7 +1,7 @@
 package Interfase;
 
-import Pages.LoginPage;
-import Helpers.SwitchServer;
+import Pages.AuthorizationPages.LoginPage;
+
 public class ProductionLogin implements DoLoginInterfase{
 
     @Override

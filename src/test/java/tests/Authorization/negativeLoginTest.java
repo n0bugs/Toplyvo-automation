@@ -1,8 +1,7 @@
 package tests.Authorization;
 
-import Pages.LoginPage;
+import Pages.AuthorizationPages.LoginPage;
 import common.AndroidSetUp;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import io.qameta.allure.Story;

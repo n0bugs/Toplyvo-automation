@@ -1,9 +1,9 @@
 package tests.Fuel;
 
-import Pages.BuyFuelPage;
-import Pages.ByFuelSkeleton;
-import Pages.LoginPage;
-import Pages.nonValidVignettePage;
+import Pages.BuyFuelPages.BuyFuelPage;
+import Pages.BuyFuelPages.ByFuelSkeleton;
+import Pages.AuthorizationPages.LoginPage;
+import Pages.VignettePages.nonValidVignettePage;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -12,7 +12,6 @@ import io.qameta.allure.Story;
 import io.qameta.allure.Severity;
 import io.qameta.allure.Feature;
 import io.qameta.allure.SeverityLevel;
-import tests.Authorization.LoginInter;
 
 
 @Feature("Buy fuel")

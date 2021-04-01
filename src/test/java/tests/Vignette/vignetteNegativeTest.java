@@ -1,7 +1,7 @@
 package tests.Vignette;
-import Pages.LoginPage;
-import Pages.VignetteScreen;
-import Pages.nonValidVignettePage;
+import Pages.AuthorizationPages.LoginPage;
+import Pages.VignettePages.VignetteScreen;
+import Pages.VignettePages.nonValidVignettePage;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
