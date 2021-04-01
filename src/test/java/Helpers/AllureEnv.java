@@ -1,10 +1,10 @@
-package Sandbox;
+package Helpers;
 
 import java.io.File;  // Import the File class
 import java.io.FileWriter;
 import java.io.IOException;  // Import the IOException class to handle errors
 
-public class Sample {
+public class AllureEnv {
     public void envStage() {
         try {
             File myObj = new File("target/allure-results/environment.xml");
