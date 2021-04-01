@@ -1,8 +1,7 @@
 package tests.Fuel;
 
-import Pages.BuyFuelPage;
-import Pages.ByFuelSkeleton;
-import Pages.LoginPage;
+import Pages.BuyFuelPages.BuyFuelPage;
+import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

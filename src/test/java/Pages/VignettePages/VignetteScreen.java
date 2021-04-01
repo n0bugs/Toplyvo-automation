@@ -1,4 +1,4 @@
-package Pages;
+package Pages.VignettePages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;

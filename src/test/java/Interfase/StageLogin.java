@@ -1,6 +1,6 @@
 package Interfase;
 
-import Pages.LoginPage;
+import Pages.AuthorizationPages.LoginPage;
 
 public class StageLogin implements DoLoginInterfase{
 

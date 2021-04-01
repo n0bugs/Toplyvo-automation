@@ -1,4 +1,4 @@
-package Pages;
+package Pages.BuyFuelPages;
 
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;

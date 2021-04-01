@@ -1,9 +1,7 @@
 package tests.Bonuses;
-import Pages.BonusesTermsPage;
-import Pages.LoginPage;
-import Pages.ShellCardCheck;
+import Pages.AuthorizationPages.LoginPage;
+import Pages.ProfilePages.ShellCardCheck;
 import common.AndroidSetUp;
-import Pages.BonusesPage;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.net.MalformedURLException;

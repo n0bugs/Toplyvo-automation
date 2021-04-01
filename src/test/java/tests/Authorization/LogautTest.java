@@ -1,7 +1,6 @@
 package tests.Authorization;
 
-import Pages.LogOutPages;
-import Pages.LoginPage;
+import Pages.AuthorizationPages.LogOutPages;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;

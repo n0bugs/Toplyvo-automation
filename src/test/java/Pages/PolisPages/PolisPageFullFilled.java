@@ -1,4 +1,4 @@
-package Pages;
+package Pages.PolisPages;
 
 import Helpers.RandomCarNumber;
 import Helpers.SwipeHelper;

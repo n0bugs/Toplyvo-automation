@@ -1,7 +1,7 @@
 package tests.Profile;
 
 
-import Pages.*;
+import Pages.ProfilePages.foundationPage;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

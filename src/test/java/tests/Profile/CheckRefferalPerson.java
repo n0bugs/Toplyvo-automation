@@ -1,6 +1,6 @@
 package tests.Profile;
 
-import Pages.CheckRefferalPage;
+import Pages.ProfilePages.CheckRefferalPage;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;

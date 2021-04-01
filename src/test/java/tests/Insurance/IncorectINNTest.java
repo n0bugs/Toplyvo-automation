@@ -1,6 +1,6 @@
 package tests.Insurance;
 
-import Pages.PolisPageFullFilled;
+import Pages.PolisPages.PolisPageFullFilled;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
