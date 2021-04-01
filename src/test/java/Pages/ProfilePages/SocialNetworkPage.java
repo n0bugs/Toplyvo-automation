@@ -1,4 +1,4 @@
-package Pages;
+package Pages.ProfilePages;
 
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.SelenideElement;

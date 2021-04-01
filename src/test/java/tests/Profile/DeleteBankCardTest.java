@@ -1,9 +1,6 @@
 package tests.Profile;
 
-import Pages.BuyFuelPage;
-import Pages.DeleteBankCardPages;
-import Pages.LoginPage;
-import Pages.BuyFromMapPage;
+import Pages.ProfilePages.DeleteBankCardPages;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

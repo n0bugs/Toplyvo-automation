@@ -1,7 +1,6 @@
 package tests.Profile;
 
-import Pages.CheckRefferalPage;
-import Pages.SocialNetworkPage;
+import Pages.ProfilePages.SocialNetworkPage;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
@@ -10,7 +9,6 @@ import io.qameta.allure.Story;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import tests.Authorization.LoginInter;
-import tests.Fuel.NegativeFuelBusinessTest;
 
 import java.net.MalformedURLException;
 

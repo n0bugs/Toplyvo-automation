@@ -1,4 +1,4 @@
-package Pages;
+package Pages.TicketPages;
 
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.Condition;

@@ -1,4 +1,4 @@
-package Pages;
+package Pages.AutorizePage;
 
 
 import com.codeborne.selenide.Condition;

@@ -1,20 +1,16 @@
 package tests.Fuel;
 
-import Pages.MoveTicketToActive;
+import Pages.TicketPages.MoveTicketToActive;
 import io.qameta.allure.Story;
 import org.testng.annotations.Parameters;
-import Pages.MoveTicketToArchive;
-import Pages.LoginPage;
 import common.AndroidSetUp;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.net.MalformedURLException;
-import io.qameta.allure.Story;
+
 import io.qameta.allure.Severity;
 import io.qameta.allure.Feature;
 import io.qameta.allure.SeverityLevel;
 import tests.Authorization.LoginInter;
-import java.net.MalformedURLException;
 
 @Severity(SeverityLevel.CRITICAL)
 @Feature("Buy Fuel")

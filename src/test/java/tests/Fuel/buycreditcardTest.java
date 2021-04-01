@@ -1,12 +1,7 @@
 package tests.Fuel;
 
-import Helpers.SwipeHelper;
-import Interfase.DoLoginInterfase;
-import Interfase.ProductionLogin;
-import Interfase.StageLogin;
-import Pages.BuyCreditcardPage;
-import Pages.ByFuelSkeleton;
-import Pages.LoginPage;
+import Pages.BuyFuelPages.BuyCreditcardPage;
+import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
