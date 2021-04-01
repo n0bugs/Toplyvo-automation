@@ -18,7 +18,7 @@ public class BonusesPage {
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.TextView[2]"));
 
-    public SelenideElement Link = $(By.id("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    public SelenideElement Link = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout" +
             "/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView[1]"));

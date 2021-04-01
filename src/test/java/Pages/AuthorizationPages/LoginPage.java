@@ -25,6 +25,12 @@ public class LoginPage extends AndroidSetUp {
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.LinearLayout/android.widget.TextView[3]"));
 
+    public SelenideElement access_sms_code = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
+            "android.widget.Button[2]"));
+
     public SelenideElement Contbut2 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout" +
@@ -64,6 +70,7 @@ public class LoginPage extends AndroidSetUp {
         skipButtonclick.shouldBe(Condition.visible).click();
         Phone.setValue("992534912");
         Contbut.shouldBe(Condition.visible).click();
+        access_sms_code.shouldBe(Condition.visible).click();
     }
 
     public void loginVariables2() {
