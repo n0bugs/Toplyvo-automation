@@ -33,9 +33,10 @@ public class SocialNetworkPage {
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public void socialNetworkMet() {
+    public void socialNetworkMet() throws InterruptedException {
         account.shouldBe(visible).click();
         wearemarket.shouldBe(visible).click();
+        Thread.sleep(3000);
         atSwipeHelper.DownSwipe();
         socialBlock.shouldBe(visible);
         fourthElemCheck.shouldBe(visible);

@@ -39,15 +39,18 @@ public class SwipeHelper extends AndroidSetUp{
 
     public void DownSwipe() {
         PointOption point = new PointOption();
-        point.withCoordinates(300, 1000);
+        point.withCoordinates(612, 1374);
         PointOption point2 = new PointOption();
-        point2.withCoordinates(300, 500);
+        point2.withCoordinates(577, 391);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)
                 .release()
                 .perform();
+
+
     }
+
     public void UpSwipe() {
         PointOption point = new PointOption();
         point.withCoordinates(300, 500);
@@ -88,17 +91,6 @@ public class SwipeHelper extends AndroidSetUp{
         point.withCoordinates(363, 1002);
         PointOption point2 = new PointOption();
         point2.withCoordinates(369, 557);
-        (new TouchAction(driver))
-                .longPress(point)
-                .moveTo(point2)
-                .release()
-                .perform();
-    }
-    public void SwipeNominal(){
-        PointOption point = new PointOption();
-        point.withCoordinates(592, 360);
-        PointOption point2 = new PointOption();
-        point2.withCoordinates(119, 360);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)

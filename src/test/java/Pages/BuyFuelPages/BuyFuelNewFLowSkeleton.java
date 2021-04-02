@@ -22,7 +22,7 @@ public class BuyFuelNewFLowSkeleton {
 
     private SelenideElement tabletochkiAccept = $(By.id("btn_ok"));
 
-    private SelenideElement choosePayment = $(By.id("tv_payment_type"));
+    private SelenideElement choosePayment = $(By.id("arrow_down_iv"));
 
     public void buyFuelSkeletonMethod() {
         buyFuelButton.click();

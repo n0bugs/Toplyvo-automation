@@ -36,6 +36,7 @@ public class DeleteBankCardPages extends AndroidSetUp {
             tap_profile.shouldBe(Condition.visible).click();
             marketplase_modal.shouldBe(Condition.visible).click();
             profile_bank_card.shouldBe(Condition.visible).click();
+            Thread.sleep(3000);
             atSwiperHelper.SwipeDeleteCard();
             confirm_delete_card.shouldBe(Condition.visible).click();
 

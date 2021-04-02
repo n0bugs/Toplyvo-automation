@@ -19,17 +19,16 @@ public class BonusesTermsPage {
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.TextView[1]"));
 
 
-    private SelenideElement checkLastTextBlock = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[3]"));
+    private SelenideElement checkLastTextBlock = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.ListView/android.view.View[3]/android.widget.TextView"));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public void bonusesTermsMet(){
+
+    public void bonusesTermsMet() throws InterruptedException {
 
         bonusesButton.shouldBe(visible).click();
         termsofUse.shouldBe(visible).click();
+        Thread.sleep(3000);
         atSwipeHelper.DownSwipe();
         checkLastTextBlock.shouldBe(visible);
 
