@@ -6,6 +6,10 @@
         <parameter name="server" value="stage"/>
 
         <classes>
+            <class name="tests.Fuel.FavouritesFuelTest" />
+            <class name="tests.Fuel.FavouriteFuelTwoTest" />
+            <class name="tests.Fuel.DeleteFavouriteTest" />
+            <class name="tests.Fuel.CheckGoToPaymentFavTest" />
             <class name="tests.Insurance.IncorectBirthTest" />
             <class name="tests.Insurance.IncorectINNTest" />
             <class name="tests.Insurance.IncorectNameTest" />

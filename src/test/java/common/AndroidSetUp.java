@@ -29,7 +29,7 @@ public class AndroidSetUp {
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
             System.out.println("server is eq = " + value);
             if (value.equalsIgnoreCase("stage")) {
-                String apk_path = "src/test/resources/TOPLYVO_UA-devDebug-2672debug_test.apk";
+                String apk_path = "src/test/resources/TOPLYVO_UA_devDebug_2_6_78_debug_testfeature_02_04_21_09_24.apk";
                 File app = new File(apk_path);
                 System.out.println("Stage build");
                 cap.setCapability("appPackage", "ua.fuel.debug");
