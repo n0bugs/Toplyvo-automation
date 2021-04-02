@@ -9,7 +9,7 @@
 
         <classes>
 
-            <class name="tests.Vignette.vignetteNegativeTest" />
+            <class name="tests.Fuel.buycreditcardTest" />
 
         </classes>
 
@@ -22,7 +22,11 @@
 
         <classes>
 
-            <class name="tests.Bonuses.bonusesThermsCheck" />
+
+            <class name="tests.Fuel.buyfueltabletochki" />
+            <class name="tests.Fuel.buyfuelBusinessTest" />
+            <class name="tests.Fuel.buyfuelportmoneTest" />
+            <class name="tests.Fuel.newUserNegativeBuyFuel" />
 
         </classes>
 

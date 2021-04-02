@@ -1,5 +1,6 @@
 package tests.Fuel;
 
+import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.BuyFuelPage;
 import Pages.BuyFuelPages.ByFuelSkeleton;
 import Pages.AuthorizationPages.LoginPage;
@@ -23,6 +24,7 @@ public class newUserNegativeBuyFuel extends AndroidSetUp {
     ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelPage atBuyFuelPage = new BuyFuelPage();
     nonValidVignettePage atnonValidVignettePage = new nonValidVignettePage();
+    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy fuel with personal credit")
@@ -30,7 +32,7 @@ public class newUserNegativeBuyFuel extends AndroidSetUp {
 
         atLoginPage.loginVariables4();
 
-        atByFuelSkeleton.BuyFuel();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethodNEWuser();
 
         atBuyFuelPage.BuyFueelNegative();
     }

@@ -71,12 +71,6 @@ public class BuyCreditcardPage extends AndroidSetUp {
         creditCardexpdate.waitUntil(visible, 53000).sendKeys("444");
 //        atSwiperHelper.DownSwipe();
         liqpayconfirm.waitUntil(visible, 53000).click();
-        try {
-            thankYoutext.shouldBe(visible);
-        }
-        catch (NullPointerException e) {
-            System.out.println("something went wrong...");
-        }
         backtoorigin.shouldBe(visible).click();
         paymentchecktitle.shouldBe(visible);
 

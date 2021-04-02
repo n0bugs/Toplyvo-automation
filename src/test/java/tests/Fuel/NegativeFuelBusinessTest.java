@@ -1,6 +1,7 @@
 package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyFuelByBusinessPage;
+import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.ByFuelSkeleton;
 import Pages.AuthorizationPages.LoginPage;
 import common.AndroidSetUp;
@@ -23,6 +24,7 @@ public class NegativeFuelBusinessTest extends AndroidSetUp {
     ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelByBusinessPage atBuyFuelByBusinessPage = new BuyFuelByBusinessPage();
     LoginPage atLoginPage = new LoginPage();
+    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy fuel with Business account negative")
@@ -30,7 +32,7 @@ public class NegativeFuelBusinessTest extends AndroidSetUp {
 
         atLoginPage.loginVariables4();
 
-        atByFuelSkeleton.BuyFuel();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethod();
 
         atBuyFuelByBusinessPage.BuyFuelByBusinessPageNEGAtive();
     }

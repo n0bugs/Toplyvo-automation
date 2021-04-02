@@ -10,10 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class BuyFuelPage extends AndroidSetUp {
 
-    public SelenideElement btnContinueAfterBuy = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView"));
+    public SelenideElement btnContinueAfterBuy = $(By.id("continue_tv"));
 
     public SelenideElement personalMoney = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +

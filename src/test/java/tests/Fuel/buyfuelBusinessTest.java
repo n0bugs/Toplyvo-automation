@@ -1,6 +1,7 @@
 package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyFuelByBusinessPage;
+import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
@@ -21,6 +22,7 @@ public class buyfuelBusinessTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelByBusinessPage atBuyFuelByBusinessPage = new BuyFuelByBusinessPage();
+    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy fuel with Business account")
@@ -28,7 +30,7 @@ public class buyfuelBusinessTest extends AndroidSetUp {
 
         atLoginInter.interSwitch(server);
 
-        atByFuelSkeleton.BuyFuel();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethod();
 
         atBuyFuelByBusinessPage.BuyFuelByBusinessPageM();
     }

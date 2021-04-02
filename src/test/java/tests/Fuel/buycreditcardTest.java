@@ -1,6 +1,7 @@
 package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyCreditcardPage;
+import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
@@ -19,7 +20,7 @@ import tests.Authorization.LoginInter;
 public class buycreditcardTest extends AndroidSetUp {
     public BuyCreditcardPage atBuyCredit = new BuyCreditcardPage();
     public LoginInter atLoginInter = new LoginInter();
-    ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
+    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy fuel with credit card")
@@ -27,7 +28,7 @@ public class buycreditcardTest extends AndroidSetUp {
 
         atLoginInter.interSwitch(server);
 
-        atByFuelSkeleton.BuyFuel();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethodPositive();
 
         atBuyCredit.BuyCredit();
 
