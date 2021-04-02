@@ -65,7 +65,7 @@ public class ShellCardCheck {
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public void  ShellCard(){
+    public void  ShellCard() throws InterruptedException {
 
         account.shouldBe(visible).click();
         wearemarket.shouldBe(visible).click();
@@ -74,12 +74,14 @@ public class ShellCardCheck {
         Name.shouldBe(visible).sendKeys("Cherkash");
         birthDate.shouldBe(visible).click();
         year.shouldBe(visible).click();
+        Thread.sleep(3000);
         atSwipeHelper.UpSwipe1();
         atSwipeHelper.UpSwipe1();
         atSwipeHelper.UpSwipe1();
         atSwipeHelper.UpSwipe1();
         Year1998.shouldBe(visible).click();
         okCalendarbut.shouldBe(visible).click();
+        Thread.sleep(3000);
         atSwipeHelper.UpSwipe();
         atSwipeHelper.UpSwipe();
         // TO DO доделать послеп фикса с бека

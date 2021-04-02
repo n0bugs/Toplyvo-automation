@@ -66,7 +66,6 @@ public class BuyCreditcardPage extends AndroidSetUp {
         creditcard.shouldBe(visible).click();
         btnpay_tickets.shouldBe(visible).click();
         creditCardnumber.waitUntil(visible, 33000).sendKeys("4242424242424242");
-
         creditCardcvv.waitUntil(visible, 53000).sendKeys("1224");
         creditCardexpdate.waitUntil(visible, 53000).sendKeys("444");
 //        atSwiperHelper.DownSwipe();

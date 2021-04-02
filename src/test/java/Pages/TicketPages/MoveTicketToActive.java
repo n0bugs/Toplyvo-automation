@@ -17,7 +17,7 @@ public class MoveTicketToActive extends AndroidSetUp {
             "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/" +
             "android.widget.TextView"));
 
-    public SelenideElement btn_arhive = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Архив\"]/android.widget.LinearLayout/android.widget.TextView"));
+    public SelenideElement btn_arhive = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Архив\"]"));
 
     public SelenideElement talon_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +

@@ -41,9 +41,10 @@ public class foundationPage {
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public void checkTabletochki() {
+    public void checkTabletochki() throws InterruptedException {
         services.shouldBe(visible).click();
         helpFOund.shouldBe(visible).click();
+        Thread.sleep(3000);
         atSwipeHelper.DownSwipe();
         atSwipeHelper.DownSwipe();
         atSwipeHelper.DownSwipe();

@@ -44,6 +44,7 @@ public class MoveTicketToArchive extends AndroidSetUp {
     public void add_ticket_to_starage() {
         try{
         btn_buy_fuel.shouldBe(Condition.visible);
+        Thread.sleep(7000);
         atSwiperHelper.DownSwipe();
         ticket_to_archive.shouldBe(Condition.visible).click();
         tap_to_add_archive.shouldBe(Condition.visible).click();
