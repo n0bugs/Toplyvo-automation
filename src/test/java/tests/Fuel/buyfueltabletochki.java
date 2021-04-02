@@ -1,5 +1,6 @@
 package tests.Fuel;
 
+import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.BuyFuelPage;
 import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
@@ -19,7 +20,7 @@ import java.net.MalformedURLException;
 public class buyfueltabletochki extends AndroidSetUp {
 
     public LoginInter atLoginInter = new LoginInter();
-    ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
+    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
     BuyFuelPage atBuyFuelPage = new BuyFuelPage();
 
     @Parameters({"server"})
@@ -28,7 +29,7 @@ public class buyfueltabletochki extends AndroidSetUp {
 
         atLoginInter.interSwitch(server);
 
-        atByFuelSkeleton.BuyFuelTablPositive();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethodPositive();
 
         atBuyFuelPage.BuyFueel();
 

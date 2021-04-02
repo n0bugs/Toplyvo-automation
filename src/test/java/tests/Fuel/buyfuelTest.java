@@ -1,5 +1,6 @@
 package tests.Fuel;
 
+import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.BuyFuelPage;
 import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
@@ -21,6 +22,7 @@ public class buyfuelTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelPage atBuyFuelPage = new BuyFuelPage();
+    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy fuel with personal credit")
@@ -28,7 +30,7 @@ public class buyfuelTest extends AndroidSetUp {
 
         atLoginInter.interSwitch(server);
 
-        atByFuelSkeleton.BuyFuel();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethod();
 
         atBuyFuelPage.BuyFueel();
 

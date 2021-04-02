@@ -94,4 +94,15 @@ public class SwipeHelper extends AndroidSetUp{
                 .release()
                 .perform();
     }
+    public void SwipeNominal(){
+        PointOption point = new PointOption();
+        point.withCoordinates(592, 360);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(119, 360);
+        (new TouchAction(driver))
+                .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
 }
