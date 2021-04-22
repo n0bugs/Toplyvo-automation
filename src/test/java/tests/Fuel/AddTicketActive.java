@@ -21,7 +21,7 @@ public class AddTicketActive extends AndroidSetUp {
     @Test
     @Story("Add ticket to active")
     @Parameters({"server"})
-    public void AddToArchiveTest(String server) throws MalformedURLException, InterruptedException {
+    public void AddToActiveTest(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
 

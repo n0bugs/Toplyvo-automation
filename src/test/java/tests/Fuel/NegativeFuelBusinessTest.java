@@ -32,7 +32,7 @@ public class NegativeFuelBusinessTest extends AndroidSetUp {
 
         atLoginPage.loginVariables4();
 
-        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethod();
+        atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethodNEWuser();
 
         atBuyFuelByBusinessPage.BuyFuelByBusinessPageNEGAtive();
     }

@@ -42,6 +42,5 @@ public class BonusesPage {
         FriendInv.shouldBe(visible).click();
         Link.shouldHave(text("https://egx5a.app.goo.gl/oVRg"));
         ShareButton.shouldBe(visible);
-
     }
 }

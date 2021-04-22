@@ -30,6 +30,8 @@ public class BonusesTermsPage {
         termsofUse.shouldBe(visible).click();
         Thread.sleep(3000);
         atSwipeHelper.DownSwipe();
+        atSwipeHelper.DownSwipe();
+        atSwipeHelper.DownSwipe();
         checkLastTextBlock.shouldBe(visible);
 
     }

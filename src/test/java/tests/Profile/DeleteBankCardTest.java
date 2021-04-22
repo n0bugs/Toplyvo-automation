@@ -22,7 +22,7 @@ public class DeleteBankCardTest extends AndroidSetUp {
 
     @Parameters({"server"})
     @Story("Delete bank card profile")
-    public void buyFuelByMapPersomal(String server) throws MalformedURLException, InterruptedException {
+    public void DeleteBankMet(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
         atDeleteBankCardPages.delete_bank_card();
