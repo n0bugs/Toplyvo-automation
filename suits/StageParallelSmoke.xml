@@ -22,8 +22,6 @@
 <!--            <class name="tests.Insurance.IncorectINNTest" />-->
 <!--            <class name="tests.Insurance.IncorectNameTest" />-->
 
-                                    <class name="tests.Fuel.CheckIfWaitForTicketsExistTest" />
-
 
 <!--                        <class name="tests.Insurance.buyPolisTestNegative" />-->
 <!--                        <class name="tests.Insurance.buyPolisFullFilledTest" />-->
@@ -31,6 +29,7 @@
 <!--                        <class name="tests.Profile.HelpFoundationTest" />-->
 <!--                        <class name="tests.Profile.socialNetworkCheck" />-->
 <!--                        <class name="tests.Fuel.TicketAddArchiveTest" />-->
+<!--                        <class name="tests.Fuel.CheckIfWaitForTicketsExistTest" />-->
 <!--                        <class name="tests.Fuel.AddTicketActive" />-->
 <!--                        <class name="tests.Fuel.buycreditcardTest" />-->
 <!--                        <class name="tests.Fuel.FavouritesFuelTest" />-->
@@ -53,6 +52,7 @@
 <!--                        <class name="tests.Vignette.vignettePayTest" />-->
 <!--                        <class name="tests.Vignette.vignetteNegativeTest" />-->
 <!--                        <class name="tests.Vignette.vignettePayFromMapTest" />-->
+
             <!--            <class name="tests.Profile.CheckRefferalPerson" />-->
             <!--            <class name="tests.Profile.DeleteBankCardTest" />-->
             <!--            <class name="tests.Fuel.DeleteFavouriteTest" />-->
