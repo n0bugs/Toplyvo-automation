@@ -25,7 +25,7 @@ public class CheckIfWaitForTicketsExistTest extends AndroidSetUp {
     BuyFuelPage atBuyFuelPage = new BuyFuelPage();
 
     @Parameters({"server"})
-    @Story("Buy fuel from city map with personal credit")
+    @Story("Check existing wait for tickets")
     public void checkWaitTickets(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);

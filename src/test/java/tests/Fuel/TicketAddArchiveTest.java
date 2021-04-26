@@ -13,7 +13,7 @@ import io.qameta.allure.SeverityLevel;
 import tests.Authorization.LoginInter;
 
 @Severity(SeverityLevel.CRITICAL)
-@Feature("Buy Fuel")
+@Feature("Tickets")
 public class TicketAddArchiveTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     MoveTicketToArchive atMoveTicketToArchive = new MoveTicketToArchive();

@@ -54,6 +54,12 @@ public class VignetteScreen extends AndroidSetUp {
 
     public SelenideElement tap_final_button = $(By.id("continueTV"));
 
+    public SelenideElement name = $(By.id("nameSurnameET"));
+
+    public SelenideElement inn = $(By.id("passportET"));
+
+    public SelenideElement continueTV = $(By.id("continueTV"));
+
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
     public void stepbuyVignette() {
@@ -67,7 +73,9 @@ public class VignetteScreen extends AndroidSetUp {
         tap_info_car.shouldBe(visible).click();
         type_car.shouldBe(visible).click();
         info_driver.shouldBe(visible).click();
-        info_driver_tap.shouldBe(visible).click();
+        name.sendKeys("Test Test");
+        inn.sendKeys("12321321");
+        continueTV.click();
         tap_purchase_button.shouldBe(visible).click();
         personal_credit.shouldBe(visible).click();
         final_purchase.shouldBe(visible).click();

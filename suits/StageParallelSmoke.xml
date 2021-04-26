@@ -22,7 +22,9 @@
 <!--            <class name="tests.Insurance.IncorectINNTest" />-->
 <!--            <class name="tests.Insurance.IncorectNameTest" />-->
 
-
+            <class name="tests.Vignette.vignettePayTest" />
+            <class name="tests.Vignette.vignetteNegativeTest" />
+            <class name="tests.Vignette.vignettePayFromMapTest" />
 <!--                        <class name="tests.Insurance.buyPolisTestNegative" />-->
 <!--                        <class name="tests.Insurance.buyPolisFullFilledTest" />-->
 <!--                        <class name="tests.Insurance.buyPolisTest" />-->
