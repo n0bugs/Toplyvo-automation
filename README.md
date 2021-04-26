@@ -16,5 +16,5 @@ mvn clean test -PSmokeSuite
 * Serve result test
 
 ```
-allure serve 
+allure serve {allure results dir path}
 ```
