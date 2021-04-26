@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class OkkoLitersPage {
 
-    public SelenideElement firstOKKO = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement firstOKKO = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/a" +
             "ndroid.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]" +
             "/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
@@ -21,9 +21,9 @@ public class OkkoLitersPage {
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public SelenideElement checkQR = $(By.id("qrCodeView"));
+    private SelenideElement checkQR = $(By.id("qrCodeView"));
 
-    public SelenideElement backbut = $(By.id("title_left_iv"));
+    private SelenideElement backbut = $(By.id("title_left_iv"));
 
 
     public void CheckLiter() throws InterruptedException {

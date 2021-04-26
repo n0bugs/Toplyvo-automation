@@ -33,6 +33,8 @@ public class BuyFuelPage extends AndroidSetUp {
 
     public SelenideElement checkMessage = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout\n"));
 
+    public SelenideElement payTickets = $(By.id("tv_pay_tickets"));
+
     public void BuyFueel() {
         personalMoney.click();
         confirmPurchase.click();
@@ -45,6 +47,12 @@ public class BuyFuelPage extends AndroidSetUp {
         confirmPurchase2.click();
         checkMessage.shouldBe(Condition.visible);
 
+
+    }
+    public void payTickets() {
+        personalMoney.click();
+        payTickets.click();
+        btnContinueAfterBuy.click();
 
     }
 }

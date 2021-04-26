@@ -8,54 +8,54 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PolisPage extends AndroidSetUp {
-    public SelenideElement tapUslugi = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement tapUslugi = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout[3]"));
 
-    public SelenideElement OSAGO = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement OSAGO = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.RelativeLayout[1]/android.widget.ImageView[3]"));
 
-    public SelenideElement buyInsuranceButton = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement buyInsuranceButton = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.TextView"));
 
-    public SelenideElement fill_autonumber = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement fill_autonumber = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/" +
             "android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement tap_number_auto = $x("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement tap_number_auto = $x("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/" +
             "android.widget.TextView[1]");
 
-    public SelenideElement choose_city = $x("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement choose_city = $x("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView/android.widget.TextView[1]");
 
-    public SelenideElement final_reg_number_autobtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement final_reg_number_autobtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.TextView[3]"));
 
-    public SelenideElement choose_franshize = $x("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement choose_franshize = $x("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup");
 
-    public SelenideElement choose_franshize_money = $x("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement choose_franshize_money = $x("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/" +
             "android.widget.RelativeLayout[2]");
 
-    public SelenideElement payment_button_polis = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement payment_button_polis = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView[2]"));
@@ -115,13 +115,24 @@ public class PolisPage extends AndroidSetUp {
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView"));
 
-    public SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+    private SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/" +
+            "android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+    private SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout" +
+            "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/" +
+            "android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement choose_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView\n"));
+    private SelenideElement choose_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
+            "android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView"));
 
-    public SelenideElement cont_passport = $(By.id("continueTV"));
+    private SelenideElement cont_passport = $(By.id("continueTV"));
 
 
     public void stepBuyPolis() {

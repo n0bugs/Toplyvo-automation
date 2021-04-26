@@ -10,23 +10,23 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LogOutPages extends AndroidSetUp{
 
-    public SelenideElement btnAccount = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement btnAccount = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/" +
             "android.widget.LinearLayout/android.widget.FrameLayout[5]/android.widget.ImageView"));
 
-    public SelenideElement closeMarketplase = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement closeMarketplase = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[4]"));
 
-    public SelenideElement btnsettings = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement btnsettings = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/" +
             "android.view.ViewGroup/android.widget.RelativeLayout/android.widget.LinearLayout/" +
             "android.widget.ImageView[1]"));
 
-    public SelenideElement logAutBtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement logAutBtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.TextView[1]"));
