@@ -115,6 +115,13 @@ public class PolisPage extends AndroidSetUp {
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView"));
 
+    public SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+
+    public SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+
+    public SelenideElement choose_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView\n"));
+
+    public SelenideElement cont_passport = $(By.id("continueTV"));
 
 
     public void stepBuyPolis() {
@@ -127,6 +134,10 @@ public class PolisPage extends AndroidSetUp {
         final_reg_number_autobtn.shouldBe(visible).click();
         choose_franshize.shouldBe(visible).click();
         choose_franshize_money.shouldBe(visible).click();
+        tap_passport.shouldBe(visible).click();
+        choose1.shouldBe(visible).click();
+        choose_passport.shouldBe(visible).click();
+        cont_passport.shouldBe(visible).click();
         payment_button_polis.shouldBe(visible).click();
     }
 

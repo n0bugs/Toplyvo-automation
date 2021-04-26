@@ -1,5 +1,6 @@
 package Pages.VignettePages;
 
+import Helpers.SwipeHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
@@ -38,20 +39,28 @@ public class VignetteScreen extends AndroidSetUp {
 
     public SelenideElement info_driver_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
-            "android.widget.ScrollView/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[7]"));
+            "android.widget.ScrollView/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]"));
 
-    public SelenideElement tap_purchase_button = $(By.id("ua.fuel.debug:id/orderVignetteTV"));
+    public SelenideElement tap_purchase_button = $(By.id("orderVignetteTV"));
 
     public SelenideElement personal_credit = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/" +
             "android.widget.RelativeLayout[2]/android.widget.TextView"));
 
-    public SelenideElement final_purchase = $(By.id("ua.fuel.debug:id/tv_pay_tickets"));
+    public SelenideElement final_purchase = $(By.id("tv_pay_tickets"));
 
-    public SelenideElement check_buy_vignette = $(By.id("ua.fuel.debug:id/statusHintTV"));
+    public SelenideElement check_buy_vignette = $(By.id("statusHintTV"));
 
-    public SelenideElement tap_final_button = $(By.id("ua.fuel.debug:id/continueTV"));
+    public SelenideElement tap_final_button = $(By.id("continueTV"));
+
+    public SelenideElement name = $(By.id("nameSurnameET"));
+
+    public SelenideElement inn = $(By.id("passportET"));
+
+    public SelenideElement continueTV = $(By.id("continueTV"));
+
+    SwipeHelper atSwipeHelper = new SwipeHelper();
 
     public void stepbuyVignette() {
         tapUslugi.shouldBe(Condition.visible).click();
@@ -64,7 +73,9 @@ public class VignetteScreen extends AndroidSetUp {
         tap_info_car.shouldBe(visible).click();
         type_car.shouldBe(visible).click();
         info_driver.shouldBe(visible).click();
-        info_driver_tap.shouldBe(visible).click();
+        name.sendKeys("Test Test");
+        inn.sendKeys("12321321");
+        continueTV.click();
         tap_purchase_button.shouldBe(visible).click();
         personal_credit.shouldBe(visible).click();
         final_purchase.shouldBe(visible).click();

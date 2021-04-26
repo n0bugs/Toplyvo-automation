@@ -46,7 +46,6 @@ public class BuyFuelByBusinessPage {
         btnContinue.shouldBe(visible).click();
     }
     public void BuyFuelByBusinessPageNEGAtive() {
-        chuzpay.shouldBe(visible).click();
         businessaccount.shouldBe(visible).click();
         confirmPurchase.shouldBe(visible).click();
         another.shouldBe(visible).click();

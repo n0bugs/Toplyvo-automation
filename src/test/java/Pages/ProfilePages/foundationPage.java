@@ -48,9 +48,6 @@ public class foundationPage {
         atSwipeHelper.DownSwipe();
         atSwipeHelper.DownSwipe();
         atSwipeHelper.DownSwipe();
-        atSwipeHelper.DownSwipe();
-        atSwipeHelper.DownSwipe();
-        atSwipeHelper.DownSwipe();
         onehundrePercent.click();
         donationSwitcher.shouldBe(visible).click();
 

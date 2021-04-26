@@ -13,7 +13,7 @@ import io.qameta.allure.SeverityLevel;
 import tests.Authorization.LoginInter;
 
 @Severity(SeverityLevel.CRITICAL)
-@Feature("Buy Fuel")
+@Feature("Tickets")
 public class AddTicketActive extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     MoveTicketToActive atMoveTicketToActive = new MoveTicketToActive();
@@ -21,7 +21,7 @@ public class AddTicketActive extends AndroidSetUp {
     @Test
     @Story("Add ticket to active")
     @Parameters({"server"})
-    public void AddToArchiveTest(String server) throws MalformedURLException, InterruptedException {
+    public void AddToActiveTest(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
 

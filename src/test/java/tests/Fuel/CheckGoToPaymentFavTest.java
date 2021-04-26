@@ -1,5 +1,6 @@
 package tests.Fuel;
 
+import Pages.BuyFuelPages.BuyFuelPage;
 import Pages.FavouritesPages.FavouritesPage;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
@@ -18,6 +19,7 @@ import java.net.MalformedURLException;
 public class CheckGoToPaymentFavTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     FavouritesPage atFavouritesPage = new FavouritesPage();
+    BuyFuelPage atBuyFuelPage = new BuyFuelPage();
 
     @Parameters({"server"})
     @Story("Delete Fuel to favourite")
@@ -25,5 +27,7 @@ public class CheckGoToPaymentFavTest extends AndroidSetUp {
 
         atLoginInter.interSwitch(server);
         atFavouritesPage.GoToPayment();
+        atBuyFuelPage.BuyFueel();
+        atFavouritesPage.DeleteAtFavourite();
     }
 }

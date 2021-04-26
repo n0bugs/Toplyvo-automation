@@ -27,7 +27,7 @@ public class newUserNegativeBuyFuel extends AndroidSetUp {
     BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
-    @Story("Buy fuel with personal credit")
+    @Story("Buy fuel with personal credit negative")
     public void buyFuelByPersonalMoneyTest(String server) throws MalformedURLException, InterruptedException {
 
         atLoginPage.loginVariables4();

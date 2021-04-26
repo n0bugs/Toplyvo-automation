@@ -21,43 +21,28 @@ public class BuyFromMapPage extends AndroidSetUp {
             "android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/" +
             "android.view.ViewGroup[1]/android.widget.LinearLayout"));
 
-    public SelenideElement plusBtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/" +
-            "androidx.recyclerview.widget.RecyclerView/" +
-            "android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]/" +
-            "android.widget.ImageView"));
-
-    public SelenideElement btnBuyFuel = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.TextView"));
-
-    public SelenideElement choosePayment = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView"));
-
-    public SelenideElement netTabletochci = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
-            "android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/" +
-            "android.widget.LinearLayout/android.widget.TextView[2]"));
-
     public SelenideElement btnContinueAfterDiesel = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView"));
 
+    private SelenideElement imgPlus = $(By.id("img_plus"));
+
+    private SelenideElement buyTicketsButton = $(By.id("btn_buy_tickets"));
+
+    private SelenideElement tabletochkiSkip = $(By.id("btn_cancel"));
+
+    private SelenideElement tabletochkiAccept = $(By.id("btn_ok"));
+
+    private SelenideElement choosePayment = $(By.id("arrow_down_iv"));
+
     public void BuyFuelMap() {
         mapMenu.click();
         glusco.click();
         firstDiesel.click();
-        btnContinueAfterDiesel.shouldBe(visible).click();
-        plusBtn.click();
-        btnBuyFuel.click();
-        netTabletochci.shouldBe(visible).click();
+        imgPlus.click();
+        buyTicketsButton.click();
+//        tabletochkiSkip.click();
         choosePayment.click();
     }
 }

@@ -6,6 +6,8 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
 import org.openqa.selenium.By;
+
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -240,6 +242,18 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.Button[2]"));
 
+    public SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+
+    public SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+
+    public SelenideElement choose_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView\n"));
+
+    public SelenideElement cont_passport = $(By.id("continueTV"));
+
+    public SelenideElement errINNandReg = $(By.id("tv_description"));
+
+    SwipeHelper atSwipeHelper = new SwipeHelper();
+
     public void stepBuyPolis() {
         tapUslugi.shouldBe(Condition.visible).click();
         OSAGO.shouldBe(Condition.visible).click();
@@ -250,7 +264,26 @@ public class PolisPageFullFilled extends AndroidSetUp {
         fill_autonumber_1.sendKeys(atRandomCarNumber.main());
         btn_save_auto.shouldBe(visible).click();
         choose_city.shouldBe(visible).click();
+        atSwipeHelper.DownSwipe();
         final_reg_number_autobtn.shouldBe(visible).click();
+    }
+    public void stepBuyPolisNegative() throws InterruptedException {
+        tapUslugi.shouldBe(Condition.visible).click();
+        OSAGO.shouldBe(Condition.visible).click();
+        buyInsuranceButton.shouldBe(visible).click();
+        fill_autonumber.shouldBe(visible).click();
+        fill_autonumber_1.click();
+        fill_autonumber_1.sendKeys("BC6087HA");
+        btn_save_auto.shouldBe(visible).click();
+        choose_city.shouldBe(visible).click();
+        atSwipeHelper.DownSwipe();
+        final_reg_number_autobtn.shouldBe(visible).click();
+        choose_franshize.shouldBe(visible).click();
+        choose_franshize_money.shouldBe(visible).click();
+        Thread.sleep(1000);
+        atSwipeHelper.DownSwipe1();
+        payment_button_polis.shouldBe(visible).click();
+        errINNandReg.shouldHave(text("- Формат Регистрационный номер недействителен. - Тип документа не соответствует льготам"));
     }
 
     public void StepFullFilled() {
@@ -269,6 +302,10 @@ public class PolisPageFullFilled extends AndroidSetUp {
         save_date_auto.shouldBe(visible).click();
         choose_franshize.shouldBe(visible).click();
         choose_franshize_money.shouldBe(visible).click();
+        tap_passport.shouldBe(visible).click();
+        choose1.shouldBe(visible).click();
+        choose_passport.shouldBe(visible).click();
+        cont_passport.shouldBe(visible).click();
         payment_button_polis.shouldBe(visible).click();
     }
 
@@ -303,6 +340,10 @@ public class PolisPageFullFilled extends AndroidSetUp {
         save_date_auto.shouldBe(visible).click();
         choose_franshize.shouldBe(visible).click();
         choose_franshize_money.shouldBe(visible).click();
+        tap_passport.shouldBe(visible).click();
+        choose1.shouldBe(visible).click();
+        choose_passport.shouldBe(visible).click();
+        cont_passport.shouldBe(visible).click();
     }
 
     public void incorectName(){
@@ -313,22 +354,25 @@ public class PolisPageFullFilled extends AndroidSetUp {
         verify_error_fill_name.shouldBe(visible);
     }
 
-    public void Incorect_INN(){
+    public void Incorect_INN() throws InterruptedException {
         tap_insurer_name.shouldBe(visible).click();
         inn_field.shouldBe(visible).clear();
         inn_field.shouldBe(visible).sendKeys("1111111111");
+        Thread.sleep(1000);
+        atSwipeHelper.DownSwipe1();
         cont_btn_after_fill_inn.shouldBe(visible).click();
         payment_button_polis.shouldBe(visible).click();
         error_check_inn.shouldBe(visible);
     }
 
-    public void Incorect_day_birth(){
+    public void Incorect_day_birth() throws InterruptedException {
         tap_insurer_name.shouldBe(visible).click();
         birthDayLocator.shouldBe(visible).click();
         yearLocator.shouldBe(visible).click();
         SwipeHelper atSwipeHelper = new SwipeHelper();
         atSwipeHelper.DownSwipe1();
         atSwipeHelper.DownSwipe1();
+        Thread.sleep(2000);
         atSwipeHelper.DownSwipe1();
         year_18.shouldBe(visible).click();
         confirm_year.shouldBe(visible).click();
