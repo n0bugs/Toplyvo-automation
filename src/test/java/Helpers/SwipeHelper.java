@@ -25,11 +25,11 @@ public class SwipeHelper extends AndroidSetUp{
             .release()
             .perform();
     }
-    public void LeftSwipe() {
+    public void refreshSwipe() {
         PointOption point = new PointOption();
-        point.withCoordinates(100, 700);
+        point.withCoordinates(592, 523);
         PointOption point2 = new PointOption();
-        point2.withCoordinates(600, 700);
+        point2.withCoordinates(592, 728);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)

@@ -12,10 +12,10 @@ public class BuyFuelSkeletonLiters {
     private SelenideElement buyFuelButton = $(By.id("btn_buy_tickets"));
 
     private SelenideElement a92OKKO = $(By. xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
+            "/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView" +
-            "/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]"));
+            "/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[5]"));
 
     private SelenideElement buyTicketsButton = $(By.id("tv_pay_tickets"));
 
@@ -29,8 +29,9 @@ public class BuyFuelSkeletonLiters {
 
     SwipeHelper atSwiperHelper = new SwipeHelper();
 
-    public void buyFuelSkeletonLitersMethod() {
+    public void buyFuelSkeletonLitersMethod() throws InterruptedException {
         buyFuelButton.click();
+        Thread.sleep(3000);
         atSwiperHelper.DownSwipe();
         a92OKKO.click();
         inputLiters.sendKeys("10");
