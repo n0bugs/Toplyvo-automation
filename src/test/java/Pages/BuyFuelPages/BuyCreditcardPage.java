@@ -10,23 +10,23 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class BuyCreditcardPage extends AndroidSetUp {
 
-    public SelenideElement creditcard = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement creditcard = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView"));
 
-    public SelenideElement btnpay_tickets = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement btnpay_tickets = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
 
-    public SelenideElement creditCardnumber = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.w" +
+    private SelenideElement creditCardnumber = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.w" +
             "idget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget." +
             "FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLay" +
             "out/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view." +
             "View[6]/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.EditText"));
 
-    public SelenideElement creditCardcvv = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement creditCardcvv = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
@@ -34,29 +34,29 @@ public class BuyCreditcardPage extends AndroidSetUp {
             "android.view.View[1]/android.view.View[2]/android.widget.EditText"));
 
 
-    public SelenideElement creditCardexpdate = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement creditCardexpdate = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
             "android.view.View/android.view.View/android.view.View[2]/android.view.View[6]/android.view.View/" +
             "android.view.View[1]/android.view.View[3]/android.widget.EditText"));
 
-    public SelenideElement liqpayconfirm = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+    private SelenideElement liqpayconfirm = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/" +
             "android.view.View[6]/android.view.View/android.view.View[3]"));
 
-    public SelenideElement thankYoutext = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement thankYoutext = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
             "android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View[1]"));
 
-    public SelenideElement backtoorigin = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement backtoorigin = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
             "android.view.View/android.view.View/android.view.View[2]/android.view.View[2]"));
 
-    public SelenideElement paymentchecktitle = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement paymentchecktitle = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[1]"));
 

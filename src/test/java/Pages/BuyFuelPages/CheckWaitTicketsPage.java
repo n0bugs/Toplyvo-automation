@@ -9,15 +9,15 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CheckWaitTicketsPage {
 
-    public SelenideElement WaitBut = $(By.id("l_expect_to_receive"));
+    private SelenideElement WaitBut = $(By.id("l_expect_to_receive"));
 
-    public SelenideElement firstElem = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement firstElem = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
             "/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.ScrollView/android.widget.RelativeLayout/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.TextView"));
 
-    public SelenideElement back = $(By.id("title_left_iv"));
+    private SelenideElement back = $(By.id("title_left_iv"));
 
     public void CheckMetod() {
         WaitBut.shouldBe(Condition.visible).click();

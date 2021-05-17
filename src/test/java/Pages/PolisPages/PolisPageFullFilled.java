@@ -12,37 +12,32 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PolisPageFullFilled extends AndroidSetUp {
-    public SelenideElement tapUslugi = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement tapUslugi = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout[3]"));
 
-    public SelenideElement OSAGO = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement OSAGO = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.RelativeLayout[1]/android.widget.ImageView[3]"));
 
-    public SelenideElement buyInsuranceButton = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement buyInsuranceButton = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.TextView"));
 
-    public SelenideElement fill_autonumber = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement fill_autonumber = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/" +
             "android.widget.FrameLayout/android.widget.TextView"));
 
-//    public SelenideElement tap_number_auto = $x("/hierarchy/android.widget.FrameLayout/" +
-//            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-//            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
-//            "android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/" +
-//            "android.widget.TextView[1]");
 
-    public SelenideElement fill_autonumber_1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement fill_autonumber_1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText"));
 
-    public SelenideElement choose_city = $x("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement choose_city = $x("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.LinearLayout/" +
@@ -52,65 +47,65 @@ public class PolisPageFullFilled extends AndroidSetUp {
 //    Todo сделать полное заполнение полей по номеру авто
 
 
-    public SelenideElement final_reg_number_autobtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement final_reg_number_autobtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.TextView[3]"));
 
-    public SelenideElement btn_save_auto = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement btn_save_auto = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.TextView"));
 
-    public SelenideElement auto_mark_filled = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement auto_mark_filled = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement inputET = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement inputET = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText"));
 
-    public SelenideElement selector_auto_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement selector_auto_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/" +
             "android.widget.TextView"));
 
-    public SelenideElement auto_model_filled = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement auto_model_filled = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout" +
             "/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement auto_model_filled_aviator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement auto_model_filled_aviator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/" +
             "android.widget.TextView"));
 
-    public SelenideElement type_car_global = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+    private SelenideElement type_car_global = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[4]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement choose_car_type = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement choose_car_type = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/" +
             "android.widget.RelativeLayout[4]/android.widget.TextView"));
 
-    public SelenideElement vin_code_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+    private SelenideElement vin_code_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[6]/android.widget.RelativeLayout[2]/" +
             "android.widget.FrameLayout/android.widget.TextView"));
 
-    public SelenideElement vin_code_fill = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement vin_code_fill = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.LinearLayout/android.widget.EditText"));
 
-    public SelenideElement save_vin_code = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement save_vin_code = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout" +
             "/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.TextView"));
 
-    public SelenideElement save_date_auto = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement save_date_auto = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.TextView"));
@@ -121,13 +116,13 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup");
 
-    public SelenideElement choose_franshize_money = $x("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement choose_franshize_money = $x("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/" +
             "android.widget.RelativeLayout[2]");
 
-    public SelenideElement payment_button_polis = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement payment_button_polis = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView[2]"));
@@ -203,54 +198,54 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText"));
 
-    public SelenideElement verify_error_fill_name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement verify_error_fill_name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.TextView[1]"));
 
-    public SelenideElement inn_field = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement inn_field = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
             "android.widget.EditText"));
 
-    public SelenideElement cont_btn_after_fill_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement cont_btn_after_fill_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[3]"));
 
-    public SelenideElement error_check_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement error_check_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout"));
 
-    public SelenideElement birthDayLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement birthDayLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.widget.TextView"));
 
-    public SelenideElement yearLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement yearLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.widget.DatePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
             "android.widget.TextView[1]"));
 
-    public SelenideElement year_18 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+    private SelenideElement year_18 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/android.widget.LinearLayout/" +
             "android.widget.ScrollView/android.widget.ViewAnimator/android.widget.ListView/android.widget.TextView[8]"));
 
-    public SelenideElement confirm_year = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private SelenideElement confirm_year = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.Button[2]"));
 
-    public SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+    private SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
 
-    public SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
+    private SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
 
-    public SelenideElement choose_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView\n"));
+    private SelenideElement choose_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.TextView\n"));
 
-    public SelenideElement cont_passport = $(By.id("continueTV"));
+    private SelenideElement cont_passport = $(By.id("continueTV"));
 
-    public SelenideElement errINNandReg = $(By.id("tv_description"));
+    private SelenideElement errINNandReg = $(By.id("tv_description"));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 

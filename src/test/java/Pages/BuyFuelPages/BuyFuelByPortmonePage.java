@@ -8,12 +8,12 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BuyFuelByPortmonePage extends AndroidSetUp {
 
-    public SelenideElement confirmPurchase = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private SelenideElement confirmPurchase = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
 
-    public SelenideElement testSDK = $(By.id("ua.fuel.debug:id/typeTV"));
+    private SelenideElement testSDK = $(By.id("ua.fuel.debug:id/typeTV"));
 
     //TO DO актуализировать
     public void BuyFuelPortmone() {
