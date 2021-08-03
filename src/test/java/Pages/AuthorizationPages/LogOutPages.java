@@ -20,11 +20,7 @@ public class LogOutPages extends AndroidSetUp{
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[4]"));
 
-    private SelenideElement btnsettings = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/" +
-            "android.view.ViewGroup/android.widget.RelativeLayout/android.widget.LinearLayout/" +
-            "android.widget.ImageView[1]"));
+    private SelenideElement btnsettings = $(By.id("title_left_iv"));
 
     private SelenideElement logAutBtn = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +

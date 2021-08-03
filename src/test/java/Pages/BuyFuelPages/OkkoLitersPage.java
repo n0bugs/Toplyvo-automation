@@ -10,14 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class OkkoLitersPage {
 
-    private SelenideElement firstOKKO = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/a" +
-            "ndroid.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]" +
-            "/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
-            "androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout"));
+    private SelenideElement firstOKKO = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[3]"));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
@@ -27,8 +20,9 @@ public class OkkoLitersPage {
 
 
     public void CheckLiter() throws InterruptedException {
-        Thread.sleep(10000);
-        atSwipeHelper.DownSwipe();
+        Thread.sleep(9000);
+        atSwipeHelper.refreshSwipe();
+        Thread.sleep(30000);
         atSwipeHelper.DownSwipe();
         firstOKKO.shouldBe(Condition.visible).click();
         checkQR.shouldBe(Condition.visible);

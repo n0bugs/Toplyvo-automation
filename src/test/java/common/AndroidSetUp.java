@@ -29,7 +29,7 @@ public class AndroidSetUp {
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
             System.out.println("server is eq = " + value);
             if (value.equalsIgnoreCase("stage")) {
-                String apk_path = "src/test/resources/TOPLYVO_UA_devDebug_2_6_89_debug_testfeature_21_04_21_10_38.apk";
+                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_38_debug_testfeature_30_07_21_14_25.apk";
                 File app = new File(apk_path);
                 System.out.println("Stage build");
                 cap.setCapability("appPackage", "ua.fuel.debug");
@@ -44,7 +44,7 @@ public class AndroidSetUp {
             cap.setCapability("deviceName", "Samsung  A30S");
             cap.setCapability("platformName", "Android");
             cap.setCapability("appActivity", "ua.fuel.ui.splash.SplashActivity");
-            cap.setCapability("platformVersion", "10");
+            cap.setCapability("platformVersion", "11");
             cap.setCapability("automationName", "uiautomator2");
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
@@ -60,7 +60,7 @@ public class AndroidSetUp {
                         DesiredCapabilities capabilities = new DesiredCapabilities();
                         String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
                         if (value.equalsIgnoreCase("stage")) {
-                            String apk_path = "src/test/resources/TOPLYVO_UA_devDebug_2_6_89_debug_testfeature_21_04_21_10_38.apk";
+                            String apk_path = "src/test/resources/TOPLYVO_UA_devDebug_2_7_13_debug_testfeature_18_05_21_09_58.apk";
                             File app = new File(apk_path);
                             System.out.println("Stage build");
                             capabilities.setCapability("appPackage", "ua.fuel.debug");

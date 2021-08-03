@@ -1,5 +1,6 @@
 package tests.Fuel;
 
+import Pages.AuthorizationPages.LoginPage;
 import Pages.TicketPages.MoveTicketToActive;
 import io.qameta.allure.Story;
 import org.testng.annotations.Parameters;
@@ -17,13 +18,14 @@ import tests.Authorization.LoginInter;
 public class AddTicketActive extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     MoveTicketToActive atMoveTicketToActive = new MoveTicketToActive();
+    LoginPage atLoginPage = new LoginPage();
 
     @Test
     @Story("Add ticket to active")
     @Parameters({"server"})
     public void AddToActiveTest(String server) throws MalformedURLException, InterruptedException {
 
-        atLoginInter.interSwitch(server);
+        atLoginPage.loginVariables7();
 
         atMoveTicketToActive.add_ticket_to_active();
 

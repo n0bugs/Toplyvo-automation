@@ -5,6 +5,7 @@ import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.element;
 
 public class BuyFuelByPortmonePage extends AndroidSetUp {
 

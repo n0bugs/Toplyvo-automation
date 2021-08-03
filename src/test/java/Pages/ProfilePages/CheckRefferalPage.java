@@ -30,11 +30,7 @@ public class CheckRefferalPage {
             "android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.RelativeLayout/android.view.ViewGroup"));
 
-    public SelenideElement check_invite_people = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.view.ViewGroup/android.widget.RelativeLayout/android.widget.LinearLayout[2]/" +
-            "android.widget.TextView[1]"));
+    public SelenideElement check_invite_people = $(By.id("ref_count_tv"));
 
 
     public void checkrefpesonal(){

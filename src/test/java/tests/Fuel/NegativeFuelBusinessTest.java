@@ -20,7 +20,7 @@ import tests.Authorization.LoginInter;
 @Test
 public class NegativeFuelBusinessTest extends AndroidSetUp {
 
-    public LoginInter atLoginInter = new LoginInter();
+    LoginInter atLoginInter = new LoginInter();
     ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelByBusinessPage atBuyFuelByBusinessPage = new BuyFuelByBusinessPage();
     LoginPage atLoginPage = new LoginPage();

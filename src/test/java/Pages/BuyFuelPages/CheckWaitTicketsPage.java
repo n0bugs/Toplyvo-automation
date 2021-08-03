@@ -1,5 +1,6 @@
 package Pages.BuyFuelPages;
 
+import Helpers.SwipeHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -19,7 +20,12 @@ public class CheckWaitTicketsPage {
 
     private SelenideElement back = $(By.id("title_left_iv"));
 
-    public void CheckMetod() {
+    SwipeHelper atSwiperHelper = new SwipeHelper();
+
+    public void CheckMetod() throws InterruptedException {
+        Thread.sleep(9000);
+        atSwiperHelper.refreshSwipe();
+        Thread.sleep(10000);
         WaitBut.shouldBe(Condition.visible).click();
         firstElem.shouldBe(Condition.visible);
         back.shouldBe(Condition.visible).click();
