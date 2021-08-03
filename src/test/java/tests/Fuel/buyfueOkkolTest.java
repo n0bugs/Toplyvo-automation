@@ -34,7 +34,7 @@ public class buyfueOkkolTest extends AndroidSetUp {
 
         atBuyFuelSkeletonLiters.buyFuelSkeletonLitersMethod();
 
-        atBuyFuelPage.payTickets();
+        atBuyFuelPage.payTickets2();
 
     }
 

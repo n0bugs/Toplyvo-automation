@@ -23,8 +23,9 @@ public class CheckWaitTicketsPage {
     SwipeHelper atSwiperHelper = new SwipeHelper();
 
     public void CheckMetod() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(9000);
         atSwiperHelper.refreshSwipe();
+        Thread.sleep(10000);
         WaitBut.shouldBe(Condition.visible).click();
         firstElem.shouldBe(Condition.visible);
         back.shouldBe(Condition.visible).click();

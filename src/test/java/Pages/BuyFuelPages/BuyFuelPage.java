@@ -18,6 +18,8 @@ public class BuyFuelPage extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/" +
             "android.widget.RelativeLayout[2]/android.widget.TextView"));
 
+    public SelenideElement personalMoney2 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[3]/android.widget.TextView\n"));
+
     public SelenideElement confirmPurchase = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
@@ -51,6 +53,13 @@ public class BuyFuelPage extends AndroidSetUp {
     }
     public void payTickets() {
         personalMoney.click();
+        payTickets.click();
+        btnContinueAfterBuy.click();
+
+    }
+    public void payTickets2() throws InterruptedException {
+        Thread.sleep(1000);
+        personalMoney2.click();
         payTickets.click();
         btnContinueAfterBuy.click();
 

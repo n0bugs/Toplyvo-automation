@@ -36,8 +36,7 @@ public class MoveTicketToArchive extends AndroidSetUp {
     SwipeHelper atSwiperHelper = new SwipeHelper();
 
     public void add_ticket_to_starage() throws InterruptedException {
-        Thread.sleep(3000);
-
+        Thread.sleep(9000);
         atSwiperHelper.refreshSwipe();
         ticket_to_archive.shouldBe(Condition.visible).click();
         tap_to_add_archive.shouldBe(Condition.visible).click();

@@ -11,23 +11,20 @@ public class FavouritesPage extends AndroidSetUp {
 
     private SelenideElement click_buy_fuels = $(By.id("btn_buy_tickets"));
 
+    public SelenideElement Fuel95 = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"95\"]/android.widget.TextView"));
+
+
     public SelenideElement Fuel98 = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"98\"]/android.widget.TextView"));
+
+    public SelenideElement Fuel95e = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"95E\"]/android.widget.TextView"));
 
     public SelenideElement dtfuel = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"ДТ+\"]/android.widget.TextView"));
 
     public SelenideElement gas = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Газ\"]/android.widget.TextView"));
 
-    private SelenideElement ovis = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView" +
-            "/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.ImageView[3]"));
+    private SelenideElement ovis = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[7]/android.widget.ImageView[3]\n"));
 
-    private SelenideElement glus = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView" +
-            "/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[5]/android.widget.ImageView[3]"));
+    private SelenideElement glus = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.ImageView[3]\n"));
 
     private SelenideElement backBut = $(By.id("title_left_iv"));
 
@@ -50,6 +47,7 @@ public class FavouritesPage extends AndroidSetUp {
     public void FavouritesPageAction() throws InterruptedException {
         click_buy_fuels.shouldBe(visible).click();
         Fuel98.shouldBe(visible).click();
+        Fuel95e.shouldBe(visible).click();
         dtfuel.shouldBe(visible).click();
         gas.shouldBe(visible).click();
         ovis.shouldBe(visible).click();
@@ -78,6 +76,7 @@ public class FavouritesPage extends AndroidSetUp {
     public void GoToPayment() throws InterruptedException {
         click_buy_fuels.shouldBe(visible).click();
         Fuel98.shouldBe(visible).click();
+        Fuel95e.shouldBe(visible).click();
         dtfuel.shouldBe(visible).click();
         gas.shouldBe(visible).click();
         ovis.shouldBe(visible).click();
