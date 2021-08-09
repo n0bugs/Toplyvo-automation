@@ -18,3 +18,9 @@ mvn clean test -PSmokeSuite
 ```
 allure serve {allure results dir path}
 ```
+
+* Allure-Jenkins Plugin 
+
+```
+https://github.com/qa-guru/allure-notifications
+```
