@@ -87,5 +87,11 @@ public class LoginPage extends AndroidSetUp {
         Contbut.shouldBe(Condition.visible).click();
         Authbut.setValue("111111");
     }
+    public void loginVariables8() {
+        skipButtonclick.shouldBe(Condition.visible).click();
+        Phone.setValue("989898989");
+        Contbut.shouldBe(Condition.visible).click();
+        Authbut.setValue("111111");
+    }
 
 }

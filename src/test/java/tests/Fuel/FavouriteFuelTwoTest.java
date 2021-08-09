@@ -17,13 +17,13 @@ import java.net.MalformedURLException;
 @Test
 public class FavouriteFuelTwoTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
-    FavouritesPage atFavouritesPage = new FavouritesPage();
+//    FavouritesPage atFavouritesPage = new FavouritesPage();
 
     @Parameters({"server"})
     @Story("Add 2 Fuel to favourite")
     public void AddTicketTwoToFavouties(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
-        atFavouritesPage.AddTwoTicket();
+//        atFavouritesPage.AddTwoTicket();
     }
 }

@@ -29,7 +29,7 @@ public class AndroidSetUp {
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
             System.out.println("server is eq = " + value);
             if (value.equalsIgnoreCase("stage")) {
-                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_38_debug_testfeature_30_07_21_14_25.apk";
+                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_39_debug_testfeature_05_08_21_15_40.apk";
                 File app = new File(apk_path);
                 System.out.println("Stage build");
                 cap.setCapability("appPackage", "ua.fuel.debug");
@@ -49,7 +49,7 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-            driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4890/wd/hub"), cap);
             WebDriverRunner.setWebDriver(driver);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             SelenideLogger
@@ -60,7 +60,7 @@ public class AndroidSetUp {
                         DesiredCapabilities capabilities = new DesiredCapabilities();
                         String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
                         if (value.equalsIgnoreCase("stage")) {
-                            String apk_path = "src/test/resources/TOPLYVO_UA_devDebug_2_7_13_debug_testfeature_18_05_21_09_58.apk";
+                            String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_39_debug_testfeature_05_08_21_15_40.apk";
                             File app = new File(apk_path);
                             System.out.println("Stage build");
                             capabilities.setCapability("appPackage", "ua.fuel.debug");

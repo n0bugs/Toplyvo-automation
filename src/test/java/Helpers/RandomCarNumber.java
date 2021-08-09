@@ -6,7 +6,7 @@ import java.util.Random;
     public String main() {
 
         // create a string of uppercase and lowercase characters and numbers
-        String upperAlphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+        String upperAlphabet = "АБВГДЕЖЗИІЙКЛМНОПРСТУФХЦЧЯ";
 
         String numbers = "0123456789";
 

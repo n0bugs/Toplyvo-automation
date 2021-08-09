@@ -8,60 +8,59 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ShellCardCheck {
 
-    private SelenideElement account = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement account = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
             "/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/" +
             "android.widget.LinearLayout/android.widget.FrameLayout[5]"));
 
-    private SelenideElement wearemarket = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement wearemarket = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout" +
             "/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[4]"));
 
-    private SelenideElement ShellCardBut = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement ShellCardBut = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]" +
             "/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.ScrollView/" +
             "android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.widget.TextView[1]"));
 
-    private SelenideElement Name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement Name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.EditText"));
 
-    private SelenideElement Surname = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement Surname = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText"));
 
-    private SelenideElement birthDate = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement birthDate = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.EditText"));
 
-    private SelenideElement year = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement year = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
             "/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/" +
             "android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[1]"));
 
-        private SelenideElement Year1998 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+        private final SelenideElement Year1998 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
                 "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
                 "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/" +
                 "android.widget.LinearLayout/android.widget.ScrollView/android.widget.ViewAnimator/android.widget.ListView/android.widget.TextView[2]"));
 
-        private SelenideElement okCalendarbut = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+        private final SelenideElement okCalendarbut = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
                 "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/a" +
                 "ndroid.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]"));
 
-        private SelenideElement getCard = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+        private final SelenideElement getCard = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
                 "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
                 "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
                 "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[4]"));
 
-//    private SelenideElement  = $(By.xpath(""));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
