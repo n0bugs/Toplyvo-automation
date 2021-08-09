@@ -6,7 +6,7 @@
       "replyTo": ""
     },
     "base": {
-      "lang": "en",
+      "lang": "ru",
       "messenger": "telegram",
       "allureFolder": "src/target/",
       "mattermostUrl": "",
