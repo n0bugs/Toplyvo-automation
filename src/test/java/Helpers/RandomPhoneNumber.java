@@ -34,6 +34,6 @@ public class RandomPhoneNumber {
         }
 
         String randomString = sb.toString();
-        return "096" + randomString;
+        return "96" + randomString;
     }
 }

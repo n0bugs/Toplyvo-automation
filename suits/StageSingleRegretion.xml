@@ -7,17 +7,18 @@
 
         <classes>
 
-<!--            <class name="tests.Authorization.negativeLoginTest" />-->
-<!--            <class name ="tests.Authorization.loginTest" />-->
+
 
 <!--            <class name="tests.Fuel.buyFuelMapTest" />-->
 
-<!--     !?       <class name="tests.Fuel.FavouritesFuelTest"/>-->
-            <class name="tests.Fuel.buyfuelTest" />
-            <class name="tests.Fuel.buyfueOkkolTest" />
-            <class name="tests.Vignette.vignettePayTest" />
-            <class name="tests.Insurance.buyPolisFullFilledTest" />
-            <class name="tests.Fuel.FavouritesFuelTest"/>
+<!--            <class name="tests.Fuel.buyfuelTest" />-->
+<!--            <class name="tests.Fuel.buyfueOkkolTest" />-->
+<!--            <class name="tests.Vignette.vignettePayTest" />-->
+<!--            <class name="tests.Insurance.buyPolisFullFilledTest" />-->
+<!--            <class name="tests.Fuel.FavouritesFuelTest"/>-->
+<!--            <class name="tests.Vignette.vignettePayFromMapTest"/>-->
+<!--            <class name="tests.Profile.CheckRefferalPerson"/>-->
+            <class name="tests.Bonuses.shellCardTest"/>
         </classes>
 
     </test>
