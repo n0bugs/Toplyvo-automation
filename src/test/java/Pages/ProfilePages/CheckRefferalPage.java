@@ -23,7 +23,7 @@ public class CheckRefferalPage {
 
     public void checkrefpesonal() {
         bonusesButton.shouldBe(visible).click();
-        if (skipMarketPlase != skipMarketPlase.shouldBe(not(visible))) {
+        if (skipMarketPlase == skipMarketPlase.shouldBe(visible)) {
             skipMarketPlase.click();
         }
         continuebtn.shouldBe(visible).click();

@@ -32,8 +32,6 @@ public class BuyFromMapPage {
 
     private final SelenideElement tabletochkiSkip = $(By.id("btn_cancel"));
 
-    private final SelenideElement tabletochkiAccept = $(By.id("btn_ok"));
-
     private final SelenideElement choosePayment = $(By.id("arrow_down_iv"));
 
     public void BuyFuelMap() {
@@ -43,7 +41,7 @@ public class BuyFromMapPage {
         clickShellType.shouldBe(visible).click();
         imgPlus.shouldBe(visible).click();
         buyTicketsButton.shouldBe(visible).click();
-        if (tabletochkiSkip != tabletochkiSkip.shouldBe(not(visible))) {
+        if (tabletochkiSkip == tabletochkiSkip.shouldBe(visible)) {
             tabletochkiSkip.click();
         }
         choosePayment.shouldBe(visible).click();

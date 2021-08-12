@@ -14,7 +14,7 @@ public class BuyFuelNewFLowSkeleton {
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/" +
-            "android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[6]"));
+            "android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]"));
 
     private final SelenideElement imgPlus = $(By.id("img_plus"));
 
@@ -40,6 +40,9 @@ public class BuyFuelNewFLowSkeleton {
         FirstFuelButton.click();
         imgPlus.click();
         buyTicketsButton.click();
+        if (tabletochkiSkip != tabletochkiSkip.shouldBe(not(visible))) {
+            tabletochkiSkip.click();
+        }
         choosePayment.click();
     }
 
