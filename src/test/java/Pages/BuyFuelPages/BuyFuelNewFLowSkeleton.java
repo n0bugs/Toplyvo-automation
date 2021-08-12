@@ -29,7 +29,7 @@ public class BuyFuelNewFLowSkeleton {
         FirstFuelButton.click();
         imgPlus.click();
         buyTicketsButton.click();
-        if (tabletochkiSkip != tabletochkiSkip.shouldBe(not(visible))) {
+        if (tabletochkiSkip == tabletochkiSkip.shouldBe(visible)) {
             tabletochkiSkip.click();
         }
         choosePayment.click();
