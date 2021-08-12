@@ -1,17 +1,14 @@
 package Helpers;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
-import io.appium.java_client.MobileDriver;
 import io.appium.java_client.TouchAction;
-import org.openqa.selenium.interactions.touch.TouchActions;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.actions;
+
 
 public class SwipeHelper extends AndroidSetUp {
 
@@ -104,6 +101,7 @@ public class SwipeHelper extends AndroidSetUp {
                 .release()
                 .perform();
     }
+
     public void DownSwipe2() {
         PointOption point = new PointOption();
         point.withCoordinates(351, 1327);

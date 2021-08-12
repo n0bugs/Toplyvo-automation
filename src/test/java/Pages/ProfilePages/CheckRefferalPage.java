@@ -12,7 +12,7 @@ public class CheckRefferalPage {
 
     public SelenideElement check_spend_bonus = $(By.id("current_balance_tv"));
 
-    public SelenideElement skipMarketPlase = $(By.id("btn_ok"));
+//    public SelenideElement skipMarketPlase = $(By.id("btn_ok"));
 
     public SelenideElement continuebtn = $(By.id("continue_tv"));
 
@@ -23,9 +23,9 @@ public class CheckRefferalPage {
 
     public void checkrefpesonal() {
         bonusesButton.shouldBe(visible).click();
-        if (skipMarketPlase == skipMarketPlase.shouldBe(visible)) {
-            skipMarketPlase.click();
-        }
+//        if (skipMarketPlase == skipMarketPlase.shouldBe(visible)) {
+//            skipMarketPlase.click();
+//        }
         continuebtn.shouldBe(visible).click();
         check_spend_bonus.shouldHave(text("290"));
         ref_person_btn.shouldBe(visible).click();

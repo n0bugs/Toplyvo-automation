@@ -8,7 +8,9 @@ import Pages.VignettePages.nonValidVignettePage;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import java.net.MalformedURLException;
+
 import io.qameta.allure.Story;
 import io.qameta.allure.Severity;
 import io.qameta.allure.Feature;
@@ -21,14 +23,12 @@ import io.qameta.allure.SeverityLevel;
 public class newUserNegativeBuyFuel extends AndroidSetUp {
 
     LoginPage atLoginPage = new LoginPage();
-    ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelPage atBuyFuelPage = new BuyFuelPage();
-    nonValidVignettePage atnonValidVignettePage = new nonValidVignettePage();
     BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy fuel with personal credit negative")
-    public void buyFuelByPersonalMoneyTest(String server) throws MalformedURLException, InterruptedException {
+    public void buyFuelByPersonalMoneyTest() {
 
         atLoginPage.loginVariables4();
 

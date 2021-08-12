@@ -26,7 +26,7 @@ public class AndroidSetUp {
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"device", "server"})
-    public void setUP(String device, String server) throws MalformedURLException, InterruptedException, Exception {
+    public void setUP(String device, String server) throws Exception {
         if (device.equalsIgnoreCase("Samsung  A30S")) {
             DesiredCapabilities cap = new DesiredCapabilities();
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
@@ -63,7 +63,7 @@ public class AndroidSetUp {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
             if (value.equalsIgnoreCase("stage")) {
-                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_39_debug_testfeature_05_08_21_15_40.apk";
+                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_41_debug_testfeature_12_08_21_10_19.apk";
                 File app = new File(apk_path);
                 System.out.println("Stage build");
                 capabilities.setCapability("appPackage", "ua.fuel.debug");
@@ -94,7 +94,7 @@ public class AndroidSetUp {
 
     @AfterSuite
     @Parameters({"server"})
-    public void generalEnv(String server) throws MalformedURLException, InterruptedException, Exception {
+    public void generalEnv(String server) {
         AllureEnv atAllureEnv = new AllureEnv();
         String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
         System.out.println("server is eq = " + value);
