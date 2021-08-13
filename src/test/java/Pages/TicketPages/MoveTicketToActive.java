@@ -32,7 +32,7 @@ public class MoveTicketToActive extends AndroidSetUp {
             btn_add_to_active.shouldBe(visible).click();
             confirmToTicketAddActive.shouldBe(visible);
         } catch (Exception e) {
-            System.out.println("Не удалось переместить в активные");
+            e.printStackTrace();
         }
     }
 }

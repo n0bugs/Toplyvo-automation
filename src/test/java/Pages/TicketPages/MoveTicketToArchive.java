@@ -34,7 +34,7 @@ public class MoveTicketToArchive extends AndroidSetUp {
             TapMoveArchive.shouldBe(Condition.visible).click();
             ConfirmToMoveTicket.shouldHave(Condition.text("Перемещен"));
         } catch (Exception e) {
-            System.out.println("Талоны не подгрузились");
+            e.printStackTrace();
         }
     }
 }

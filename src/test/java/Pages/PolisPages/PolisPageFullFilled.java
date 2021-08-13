@@ -35,8 +35,6 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "androidx.recyclerview.widget.RecyclerView/android.widget.TextView[1]"));
 
 
-
-
 //    Todo сделать полное заполнение полей по номеру авто
 
 
@@ -69,7 +67,6 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.TextView"));
 
 
-
     private final SelenideElement type_car_global = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
@@ -78,9 +75,9 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.TextView"));
 
     private final SelenideElement choose_car_type = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-        "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-        "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-        "android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[3]"));
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[3]"));
 
     private final SelenideElement vin_code_tap = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
@@ -119,7 +116,7 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView[2]"));
 
-    private final SelenideElement cardNumbreType =$(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement cardNumbreType = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
@@ -238,27 +235,33 @@ public class PolisPageFullFilled extends AndroidSetUp {
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
     public void stepBuyPolis() {
-        tapUslugi
-                .shouldBe(Condition.visible).click();
-        OSAGO
-                .shouldBe(Condition.visible).click();
-        buyInsuranceButton
-                .shouldBe(visible).click();
-        fill_autonumber
-                .shouldBe(visible).click();
-        fill_autonumber_1
-                .click();
-        RandomCarNumber atRandomCarNumber = new RandomCarNumber();
-        fill_autonumber_1
-                .sendKeys(atRandomCarNumber.main());
-        btn_save_auto
-                .shouldBe(visible).click();
-        choose_city
-                .shouldBe(visible).click();
-        calc_polis
-                .shouldBe(visible).click();
+        try {
+            tapUslugi
+                    .shouldBe(Condition.visible).click();
+            OSAGO
+                    .shouldBe(Condition.visible).click();
+            buyInsuranceButton
+                    .shouldBe(visible).click();
+            fill_autonumber
+                    .shouldBe(visible).click();
+            fill_autonumber_1
+                    .click();
+            RandomCarNumber atRandomCarNumber = new RandomCarNumber();
+            fill_autonumber_1
+                    .sendKeys(atRandomCarNumber.main());
+            btn_save_auto
+                    .shouldBe(visible).click();
+            choose_city
+                    .shouldBe(visible).click();
+            calc_polis
+                    .shouldBe(visible).click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
-//
+
+    //
     public void stepBuyPolisNegative() throws InterruptedException {
         tapUslugi.shouldBe(Condition.visible).click();
         OSAGO.shouldBe(Condition.visible).click();
@@ -313,7 +316,8 @@ public class PolisPageFullFilled extends AndroidSetUp {
 //        thankYouPage.waitUntil(visible, 53000).click();
 
     }
-    public void checkPurchasePolis(){
+
+    public void checkPurchasePolis() {
         confirmPurchase.shouldBe(visible).click();
         send_email_polis.shouldBe(visible).clear();
         send_email_polis.shouldBe(visible).sendKeys("melnikm078@gmail.com");
@@ -321,7 +325,7 @@ public class PolisPageFullFilled extends AndroidSetUp {
 //        title_header.shouldBe(visible);
     }
 
-    public void skeleton_full_filled(){
+    public void skeleton_full_filled() {
         auto_mark_filled.click();
         inputET.click();
         inputET.sendKeys("Lin");
@@ -342,7 +346,7 @@ public class PolisPageFullFilled extends AndroidSetUp {
         cont_passport.shouldBe(visible).click();
     }
 
-    public void incorectName(){
+    public void incorectName() {
         tap_insurer_name.shouldBe(visible).click();
         incorect_name.shouldBe(visible).clear();
         fill_name_field.shouldBe(visible).click();

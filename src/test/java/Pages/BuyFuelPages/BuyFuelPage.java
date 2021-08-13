@@ -49,7 +49,7 @@ public class BuyFuelPage {
             verifyPurchase.shouldBe(visible).click();
             btnContinueAfterBuy.shouldBe(visible).click();
         } catch (Exception e) {
-            System.out.println("Не удалось купить топливо");
+            e.printStackTrace();
         }
     }
 
