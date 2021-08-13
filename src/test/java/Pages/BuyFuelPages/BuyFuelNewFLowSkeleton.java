@@ -36,14 +36,14 @@ public class BuyFuelNewFLowSkeleton {
     }
 
     public void buyFuelSkeletonMethodPositive() {
-        buyFuelButton.click();
-        FirstFuelButton.click();
-        imgPlus.click();
-        buyTicketsButton.click();
-        if (tabletochkiSkip != tabletochkiSkip.shouldBe(not(visible))) {
+        buyFuelButton.shouldBe(visible).click();
+        FirstFuelButton.shouldBe(visible).click();
+        imgPlus.shouldBe(visible).click();
+        buyTicketsButton.shouldBe(visible).click();
+        if (tabletochkiSkip == tabletochkiSkip.shouldBe(visible)) {
             tabletochkiSkip.click();
         }
-        choosePayment.click();
+        choosePayment.shouldBe(visible).click();
     }
 
     public void buyFuelSkeletonMethodNEWuser() {

@@ -22,7 +22,6 @@ public class CheckIfWaitForTicketsExistTest extends AndroidSetUp {
 
     public LoginInter atLoginInter = new LoginInter();
     CheckWaitTicketsPage atCheckWaitTicketsPage = new CheckWaitTicketsPage();
-    BuyFuelPage atBuyFuelPage = new BuyFuelPage();
 
     @Parameters({"server"})
     @Story("Check existing wait for tickets")
@@ -31,7 +30,6 @@ public class CheckIfWaitForTicketsExistTest extends AndroidSetUp {
         atLoginInter.interSwitch(server);
 
         atCheckWaitTicketsPage.CheckMetod();
-
 
 
     }

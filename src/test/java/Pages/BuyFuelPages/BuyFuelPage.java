@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -42,17 +43,20 @@ public class BuyFuelPage {
     public SelenideElement payTickets = $(By.id("tv_pay_tickets"));
 
     public void BuyFueel() {
-        personalMoney.click();
-        confirmPurchase.click();
-        verifyPurchase.shouldBe(Condition.visible).click();
-        btnContinueAfterBuy.click();
-
+        try {
+            personalMoney.shouldBe(visible).click();
+            confirmPurchase.shouldBe(visible).click();
+            verifyPurchase.shouldBe(visible).click();
+            btnContinueAfterBuy.shouldBe(visible).click();
+        } catch (Exception e) {
+            System.out.println("Не удалось купить топливо");
+        }
     }
 
     public void BuyFueelNegative() {
         personalMoney.click();
         confirmPurchase2.click();
-        checkMessage.shouldBe(Condition.visible);
+        checkMessage.shouldBe(visible);
 
 
     }
