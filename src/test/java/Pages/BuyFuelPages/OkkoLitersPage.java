@@ -17,7 +17,7 @@ public class OkkoLitersPage {
             "androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/" +
             "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
-            "androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[4]"));
+            "androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[6]"));
 
     private final SelenideElement checkQR = $(By.id("qrCodeView"));
 

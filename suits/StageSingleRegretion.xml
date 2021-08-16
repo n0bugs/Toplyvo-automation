@@ -16,8 +16,8 @@
              <class name="tests.Fuel.CheckIfWaitForTicketsExistTest"/>
              <class name="tests.Fuel.CheckGoToPaymentFavTest"/>
 
-             <class name="tests.Fuel.buyfueOkkolTest" />
              <class name="tests.Fuel.CheckOkkoFuelTest"/>
+             <class name="tests.Fuel.buyfueOkkolTest" />
 
              <class name="tests.Vignette.vignettePayTest" />
              <class name="tests.Insurance.buyPolisFullFilledTest"/>
