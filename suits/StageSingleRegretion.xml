@@ -6,27 +6,27 @@
         <parameter name="server" value="stage"/>
 
         <classes>
-<!--             <class name="tests.Fuel.buyfuelTest" />-->
-<!--             <class name="tests.Fuel.buyFuelMapTest" />-->
-<!--             <class name="tests.Fuel.FavouritesFuelTest"/>-->
-<!--             <class name="tests.Fuel.buycreditcardTest"/>-->
-<!--             <class name="tests.Fuel.buyfuelportmoneTest" />-->
-<!--             <class name="tests.Fuel.TicketAddArchiveTest"/>-->
-<!--             <class name="tests.Fuel.AddTicketActive"/>-->
-<!--             <class name="tests.Fuel.CheckIfWaitForTicketsExistTest"/>-->
-<!--             <class name="tests.Fuel.CheckGoToPaymentFavTest"/>-->
+             <class name="tests.Fuel.buyfuelTest" />
+             <class name="tests.Fuel.buyFuelMapTest" />
+             <class name="tests.Fuel.FavouritesFuelTest"/>
+             <class name="tests.Fuel.buycreditcardTest"/>
+             <class name="tests.Fuel.buyfuelportmoneTest" />
+             <class name="tests.Fuel.TicketAddArchiveTest"/>
+             <class name="tests.Fuel.AddTicketActive"/>
+             <class name="tests.Fuel.CheckIfWaitForTicketsExistTest"/>
+             <class name="tests.Fuel.CheckGoToPaymentFavTest"/>
 
-<!--             <class name="tests.Fuel.buyfueOkkolTest" />-->
+             <class name="tests.Fuel.buyfueOkkolTest" />
              <class name="tests.Fuel.CheckOkkoFuelTest"/>
 
-<!--             <class name="tests.Vignette.vignettePayTest" />-->
+             <class name="tests.Vignette.vignettePayTest" />
              <class name="tests.Insurance.buyPolisFullFilledTest"/>
-<!--             <class name="tests.Insurance.IncorectINNTest"/>-->
+             <class name="tests.Insurance.IncorectINNTest"/>
 
-<!--             <class name="tests.Profile.CheckRefferalPerson"/>-->
-<!--             <class name="tests.Bonuses.shellCardTest"/>-->
-<!--             <class name="tests.Profile.socialNetworkCheck"/>-->
-<!--            <class name="tests.Profile.HelpFoundationTest"/>-->
+             <class name="tests.Profile.CheckRefferalPerson"/>
+             <class name="tests.Bonuses.shellCardTest"/>
+             <class name="tests.Profile.socialNetworkCheck"/>
+            <class name="tests.Profile.HelpFoundationTest"/>
 
         </classes>
 
