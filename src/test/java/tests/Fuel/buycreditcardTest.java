@@ -2,11 +2,12 @@ package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyCreditcardPage;
 import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
-import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import java.net.MalformedURLException;
+
 import io.qameta.allure.Story;
 import io.qameta.allure.Severity;
 import io.qameta.allure.Feature;

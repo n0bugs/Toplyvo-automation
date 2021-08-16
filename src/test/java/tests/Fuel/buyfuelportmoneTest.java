@@ -2,7 +2,6 @@ package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyFuelByPortmonePage;
 import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
-import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
@@ -20,7 +19,6 @@ import java.net.MalformedURLException;
 @Test
 public class buyfuelportmoneTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
-    ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelByPortmonePage atBuyFuelByPortmonePage = new BuyFuelByPortmonePage();
     BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 

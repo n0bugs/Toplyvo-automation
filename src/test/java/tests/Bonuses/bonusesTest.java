@@ -28,8 +28,6 @@ public class bonusesTest extends AndroidSetUp {
     public void bonusTest(String server) throws MalformedURLException, InterruptedException {
         atLoginInter.interSwitch(server);
 
-//        atLoginPage.loginVariables3();
-
         atBonusesPage.checkRefLink();
 
     }

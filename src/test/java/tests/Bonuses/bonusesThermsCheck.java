@@ -1,10 +1,12 @@
 package tests.Bonuses;
+
 import Pages.BonusesPages.BonusesTermsPage;
-import Pages.AuthorizationPages.LoginPage;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import java.net.MalformedURLException;
+
 import io.qameta.allure.Story;
 import io.qameta.allure.Severity;
 import io.qameta.allure.Feature;
@@ -18,16 +20,14 @@ import tests.Authorization.LoginInter;
 
 public class bonusesThermsCheck extends AndroidSetUp {
 
-    public LoginPage atLoginPage = new LoginPage();
     BonusesTermsPage atBonusesTermsPage = new BonusesTermsPage();
     public LoginInter atLoginInter = new LoginInter();
 
     @Parameters({"server"})
     @Story("Bonuses therms policy test")
     public void bonusTest(String server) throws MalformedURLException, InterruptedException {
-        atLoginInter.interSwitch(server);
 
-//        atLoginPage.loginVariables3();
+        atLoginInter.interSwitch(server);
 
         atBonusesTermsPage.bonusesTermsMet();
 

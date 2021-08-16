@@ -3,88 +3,61 @@ package Pages.ProfilePages;
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class ShellCardCheck {
 
-    private SelenideElement account = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
-            "/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout[5]"));
+    private final SelenideElement account = $(By.id("account_tab"));
 
-    private SelenideElement wearemarket = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout" +
-            "/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[4]"));
+    private final SelenideElement wearemarket = $(By.id("btn_ok"));
 
-    private SelenideElement ShellCardBut = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]" +
-            "/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.ScrollView/" +
-            "android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.widget.TextView[1]"));
+    private final SelenideElement ShellCardBut = $(By.id("shellBlock"));
 
-    private SelenideElement Name = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.EditText"));
+    private final SelenideElement Name = $(By.id("nameInput"));
 
-    private SelenideElement Surname = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.EditText"));
+    private final SelenideElement Surname = $(By.id("surnameInput"));
 
-    private SelenideElement birthDate = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.EditText"));
+    private final SelenideElement birthDate = $(By.id("birthDateEditText"));
 
-    private SelenideElement year = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
-            "/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/" +
-            "android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[1]"));
+    private final SelenideElement year = $(By.id("android:id/date_picker_header_year"));
 
-        private SelenideElement Year1998 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-                "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-                "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/" +
-                "android.widget.LinearLayout/android.widget.ScrollView/android.widget.ViewAnimator/android.widget.ListView/android.widget.TextView[2]"));
+    private final SelenideElement Year1998 = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/" +
+            "android.widget.LinearLayout/android.widget.ScrollView/android.widget.ViewAnimator/" +
+            "android.widget.ListView/android.widget.TextView[4]"));
 
-        private SelenideElement okCalendarbut = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-                "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/a" +
-                "ndroid.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]"));
+    private final SelenideElement okCalendarbut = $(By.id("android:id/button1"));
 
-        private SelenideElement getCard = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-                "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-                "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-                "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[4]"));
+    private final SelenideElement getCard = $(By.id("getCardTV"));
 
-//    private SelenideElement  = $(By.xpath(""));
+    private final SelenideElement showCreateCard = $(By.id("cardImage"));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public void  ShellCard() throws InterruptedException {
+    public void ShellCard() throws InterruptedException {
 
         account.shouldBe(visible).click();
         wearemarket.shouldBe(visible).click();
         ShellCardBut.shouldBe(visible).click();
-        Surname.shouldBe(visible).sendKeys("Ivan");
-        Name.shouldBe(visible).sendKeys("Cherkash");
+        Surname.shouldBe(visible).sendKeys("Cherkash");
+        Name.shouldBe(visible).sendKeys("Ivan");
         birthDate.shouldBe(visible).click();
         year.shouldBe(visible).click();
         Thread.sleep(3000);
         atSwipeHelper.UpSwipe1();
         atSwipeHelper.UpSwipe1();
         atSwipeHelper.UpSwipe1();
-        atSwipeHelper.UpSwipe1();
         Year1998.shouldBe(visible).click();
         okCalendarbut.shouldBe(visible).click();
+        getCard.shouldBe(visible).click();
+        Thread.sleep(900);
+        atSwipeHelper.refreshSwipe();
         Thread.sleep(3000);
-        atSwipeHelper.UpSwipe();
-        atSwipeHelper.UpSwipe();
-        // TO DO доделать послеп фикса с бека
+        ShellCardBut.shouldBe(visible).click();
+        showCreateCard.shouldBe(visible);
     }
 }
 

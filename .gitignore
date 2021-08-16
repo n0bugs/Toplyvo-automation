@@ -1,6 +1,6 @@
 /target/
 /allure-report/
 /build/
-.idea/
+.idea
 *.iml
 .DS_Store

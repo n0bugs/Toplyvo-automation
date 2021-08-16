@@ -6,7 +6,7 @@
         <parameter name="server" value="stage"/>
 
         <classes>
-            <class name="tests.Insurance.buyPolisTestNegative" />
+<!--            <class name="tests.Insurance.buyPolisTestNegative" />-->
 <!--            <class name="tests.Insurance.buyPolisFullFilledTest" />-->
 <!--            <class name="tests.Insurance.buyPolisTest" />-->
 <!--            <class name="tests.Profile.CheckRefferalPerson" />-->
@@ -20,9 +20,9 @@
 <!--            <class name="tests.Fuel.CheckGoToPaymentFavTest" />-->
 <!--            <class name="tests.Fuel.buyfuelBusinessTest" />-->
 <!--            <class name="tests.Fuel.buyFuelMapTest" />-->
-<!--            <class name="tests.Fuel.buyfueOkkolTest" />-->
+            <class name="tests.Fuel.buyfueOkkolTest" />
 <!--            <class name="tests.Fuel.buyfueltabletochki" />-->
-<!--            <class name="tests.Fuel.buyfuelTest" />-->
+            <class name="tests.Fuel.buyfuelTest" />
 <!--            <class name="tests.Fuel.NegativeFuelBusinessTest" />-->
 <!--            <class name="tests.Fuel.newUserNegativeBuyFuel" />-->
 <!--            <class name="tests.Fuel.buyfueltabletochki" />-->

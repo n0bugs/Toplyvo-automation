@@ -1,30 +1,19 @@
 package Helpers;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
-import io.appium.java_client.MobileDriver;
 import io.appium.java_client.TouchAction;
-import org.openqa.selenium.interactions.touch.TouchActions;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.actions;
 
-public class SwipeHelper extends AndroidSetUp{
 
-    public void RightSwipe() {
-    PointOption point = new PointOption();
-    point.withCoordinates(600, 700);
-    PointOption point2 = new PointOption();
-    point2.withCoordinates(100, 700);
-    (new TouchAction(driver))
-            .longPress(point)
-            .moveTo(point2)
-            .release()
-            .perform();
-    }
+public class SwipeHelper extends AndroidSetUp {
+
+    public SelenideElement unableToView = $(By.id("l_expect_to_receive"));
+
     public void refreshSwipe() {
         PointOption point = new PointOption();
         point.withCoordinates(592, 523);
@@ -63,7 +52,7 @@ public class SwipeHelper extends AndroidSetUp{
                 .perform();
     }
 
-    public void SwipeDeleteCard(){
+    public void SwipeDeleteCard() {
         PointOption point = new PointOption();
         point.withCoordinates(620, 244);
         PointOption point2 = new PointOption();
@@ -74,6 +63,7 @@ public class SwipeHelper extends AndroidSetUp{
                 .release()
                 .perform();
     }
+
     public void UpSwipe1() {
         PointOption point = new PointOption();
         point.withCoordinates(550, 650);
@@ -87,10 +77,24 @@ public class SwipeHelper extends AndroidSetUp{
     }
 
     public void DownSwipe1() {
+        unableToView.shouldBe(visible);
+
         PointOption point = new PointOption();
-        point.withCoordinates(363, 1002);
+        point.withCoordinates(351, 1327);
         PointOption point2 = new PointOption();
-        point2.withCoordinates(369, 557);
+        point2.withCoordinates(349, 418);
+        (new TouchAction(driver))
+                .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
+
+    public void DownSwipe2() {
+        PointOption point = new PointOption();
+        point.withCoordinates(351, 1327);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(349, 418);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)

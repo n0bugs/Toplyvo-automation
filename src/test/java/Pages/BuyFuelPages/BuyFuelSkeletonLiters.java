@@ -1,42 +1,38 @@
 package Pages.BuyFuelPages;
 
-import Helpers.SwipeHelper;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BuyFuelSkeletonLiters {
 
-    private SelenideElement buyFuelButton = $(By.id("btn_buy_tickets"));
+    private final SelenideElement buyFuelButton = $(By.id("btn_buy_tickets"));
 
-    private SelenideElement a92OKKO = $(By. xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout" +
-            "/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/a" +
-            "ndroid.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[3]"));
+    private final SelenideElement a92OKKO = $(By.xpath(
+            "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+                    "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
+                    "android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
+                    "androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/" +
+                    "android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/" +
+                    "android.widget.RelativeLayout[3]"));
 
-    private SelenideElement buyTicketsButton = $(By.id("tv_pay_tickets"));
+    private final SelenideElement inputLiters = $(By.id("valueInput"));
 
-    private SelenideElement inputLiters = $(By.id("valueInput"));
+    private final SelenideElement buyLiters = $(By.id("buyFuelBtn"));
 
-    private SelenideElement buyLiters = $(By.id("buyFuelBtn"));
+    private final SelenideElement choosePayment = $(By.id("arrow_down_iv"));
 
-    private SelenideElement choosePayment = $(By.id("l_select_payment_type"));
+    private final SelenideElement tabletopSkip = $(By.id("btn_cancel"));
 
-    private SelenideElement tabletochkiSkip = $(By.id("btn_cancel"));
-
-    SwipeHelper atSwiperHelper = new SwipeHelper();
-
-    public void buyFuelSkeletonLitersMethod() throws InterruptedException {
+    public void buyFuelSkeletonLitersMethod() {
         buyFuelButton.click();
-        Thread.sleep(3000);
         a92OKKO.click();
         inputLiters.sendKeys("10");
         buyLiters.click();
-        tabletochkiSkip.click();
+        tabletopSkip.click();
         choosePayment.click();
-
     }
 }
+

@@ -24,7 +24,7 @@ public class buyFuelMapTest extends AndroidSetUp {
 
     @Parameters({"server"})
     @Story("Buy fuel from city map with personal credit")
-    public void buyFuelByMapPersomal(String server) throws MalformedURLException, InterruptedException {
+    public void buyFuelByMapPersonal(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
 

@@ -28,6 +28,5 @@ public class CheckGoToPaymentFavTest extends AndroidSetUp {
         atLoginInter.interSwitch(server);
         atFavouritesPage.GoToPayment();
         atBuyFuelPage.BuyFueel();
-        atFavouritesPage.DeleteAtFavourite();
     }
 }

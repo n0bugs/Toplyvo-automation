@@ -18,3 +18,13 @@ mvn clean test -PSmokeSuite
 ```
 allure serve {allure results dir path}
 ```
+
+* Allure-Jenkins Plugin 
+
+```
+https://github.com/qa-guru/allure-notifications
+```
+* Jenkins config -> send to Telegram Allure pie-chart 
+
+![](src/test/resources/jenkins_config.png)
+

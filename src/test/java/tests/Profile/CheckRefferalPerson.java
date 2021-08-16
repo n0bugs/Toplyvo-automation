@@ -13,7 +13,7 @@ import tests.Authorization.LoginInter;
 import java.net.MalformedURLException;
 
 @Feature("Profile/Bonus")
-@Severity(SeverityLevel.CRITICAL)
+@Severity(SeverityLevel.MINOR)
 @Test
 public class CheckRefferalPerson extends AndroidSetUp {
 

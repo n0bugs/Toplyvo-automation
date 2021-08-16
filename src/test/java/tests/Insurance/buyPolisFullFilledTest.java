@@ -20,7 +20,7 @@ public class buyPolisFullFilledTest extends AndroidSetUp {
 
     public LoginInter atLoginInter = new LoginInter();
     public PolisPageFullFilled atPolisPage = new PolisPageFullFilled();
-    public  PolisPageFullFilled atPolisPageMethod = new PolisPageFullFilled();
+    public PolisPageFullFilled atPolisPageMethod = new PolisPageFullFilled();
     public PolisPageFullFilled AtPolisPageCheck = new PolisPageFullFilled();
 
     @Parameters({"server"})
