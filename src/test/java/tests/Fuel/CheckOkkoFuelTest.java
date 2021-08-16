@@ -21,7 +21,7 @@ public class CheckOkkoFuelTest extends AndroidSetUp {
 
     @Parameters({"server"})
     @Story("Check if liters exist on main screen")
-    public void CheckOKKOliters(String server) throws MalformedURLException, InterruptedException {
+    public void CheckOKKOLiters(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
 

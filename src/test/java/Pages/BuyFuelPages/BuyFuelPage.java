@@ -1,8 +1,6 @@
 package Pages.BuyFuelPages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -58,13 +56,6 @@ public class BuyFuelPage {
         confirmPurchase2.click();
         checkMessage.shouldBe(visible);
 
-
-    }
-
-    public void payTickets() {
-        personalMoney.click();
-        payTickets.click();
-        btnContinueAfterBuy.click();
 
     }
 

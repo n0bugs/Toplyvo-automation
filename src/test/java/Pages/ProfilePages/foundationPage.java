@@ -8,49 +8,28 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class foundationPage {
-    private SelenideElement services = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout[3]/android.widget.ImageView"));
+    private final SelenideElement servicesBtn = $(By.id("service_tab"));
 
-    private SelenideElement helpFOund = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.LinearLayout/" +
-            "android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[5]"));
+    private final SelenideElement helpFoundBtn = $(By.id("rlHelp"));
 
-    private SelenideElement onehundrePercent = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout/" +
-            "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[3]"));
+    private final SelenideElement onehundretPercent = $(By.id("perc_100"));
 
-    private SelenideElement donationSwitcher = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout" +
-            "/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout/" +
-            "android.widget.RelativeLayout/android.widget.Switch"));
-//
-//    private SelenideElement getCard = $(By.xpath(""));
-//
-//    private SelenideElement getCard = $(By.xpath(""));
-//
-//    private SelenideElement getCard = $(By.xpath(""));
-//
-//    private SelenideElement getCard = $(By.xpath(""));
-
+    private final SelenideElement donationSwitcher = $(By.id("donationSwitcher"));
 
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
 
-    public void checkTabletochki() throws InterruptedException {
-        services.shouldBe(visible).click();
-        helpFOund.shouldBe(visible).click();
-        Thread.sleep(3000);
-        atSwipeHelper.DownSwipe();
-        atSwipeHelper.DownSwipe();
-        atSwipeHelper.DownSwipe();
-        onehundrePercent.click();
-        donationSwitcher.shouldBe(visible).click();
-
+    public void checkTabletochki() {
+        try {
+            servicesBtn.shouldBe(visible).click();
+            helpFoundBtn.shouldBe(visible).click();
+            atSwipeHelper.DownSwipe();
+            atSwipeHelper.DownSwipe();
+            onehundretPercent.click();
+            donationSwitcher.shouldBe(visible).click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 

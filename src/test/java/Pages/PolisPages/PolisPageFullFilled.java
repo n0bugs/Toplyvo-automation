@@ -189,19 +189,13 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
             "android.widget.TextView[1]"));
 
-    private final SelenideElement inn_field = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
-            "android.widget.EditText"));
+    private final SelenideElement inn_field = $(By.id("innET"));
 
-    private final SelenideElement cont_btn_after_fill_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[3]"));
+    private final SelenideElement cont_btn_after_fill_inn = $(By.id("continueTV"));
 
-    private final SelenideElement error_check_inn = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
-            "android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout"));
+    private final SelenideElement payButton = $(By.id("payButton"));
+
+    private final SelenideElement error_check_inn = $(By.id("tv_description"));
 
     private final SelenideElement birthDayLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
@@ -291,8 +285,6 @@ public class PolisPageFullFilled extends AndroidSetUp {
         type_car_global.shouldBe(visible).click();
         choose_car_type.click();
         vin_code_tap.shouldBe(visible).click();
-//        vin_code_fill.shouldBe(visible).click();
-
 //
 //        Генератор вин номера
         RandomVinNumberGenerator transomVinNumberGenerator = new RandomVinNumberGenerator();
@@ -322,7 +314,6 @@ public class PolisPageFullFilled extends AndroidSetUp {
         send_email_polis.shouldBe(visible).clear();
         send_email_polis.shouldBe(visible).sendKeys("melnikm078@gmail.com");
         confirm_send_email.shouldBe(visible).click();
-//        title_header.shouldBe(visible);
     }
 
     public void skeleton_full_filled() {
@@ -354,30 +345,16 @@ public class PolisPageFullFilled extends AndroidSetUp {
         verify_error_fill_name.shouldBe(visible);
     }
 
-    public void Incorect_INN() throws InterruptedException {
-        tap_insurer_name.shouldBe(visible).click();
-        inn_field.shouldBe(visible).clear();
-        inn_field.shouldBe(visible).sendKeys("1111111111");
-        Thread.sleep(1000);
-        atSwipeHelper.DownSwipe1();
-        cont_btn_after_fill_inn.shouldBe(visible).click();
-        payment_button_polis.shouldBe(visible).click();
-        error_check_inn.shouldBe(visible);
-    }
-
-    public void Incorect_day_birth() throws InterruptedException {
-        tap_insurer_name.shouldBe(visible).click();
-        birthDayLocator.shouldBe(visible).click();
-        yearLocator.shouldBe(visible).click();
-        SwipeHelper atSwipeHelper = new SwipeHelper();
-        atSwipeHelper.DownSwipe1();
-        atSwipeHelper.DownSwipe1();
-        Thread.sleep(2000);
-        atSwipeHelper.DownSwipe1();
-        year_18.shouldBe(visible).click();
-        confirm_year.shouldBe(visible).click();
-        cont_btn_after_fill_inn.shouldBe(visible).click();
-        payment_button_polis.shouldBe(visible).click();
-        error_check_inn.shouldBe(visible);
+    public void Incorect_INN() {
+        try {
+            tap_insurer_name.shouldBe(visible).click();
+            inn_field.shouldBe(visible).clear();
+            inn_field.shouldBe(visible).sendKeys("1111111111");
+            cont_btn_after_fill_inn.shouldBe(visible).click();
+            payButton.shouldBe(visible).click();
+            error_check_inn.shouldBe(visible).shouldHave(text("- Формат ИНН недействителен."));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

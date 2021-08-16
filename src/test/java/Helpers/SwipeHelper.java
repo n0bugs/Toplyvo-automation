@@ -14,18 +14,6 @@ public class SwipeHelper extends AndroidSetUp {
 
     public SelenideElement unableToView = $(By.id("l_expect_to_receive"));
 
-    public void RightSwipe() {
-        PointOption point = new PointOption();
-        point.withCoordinates(600, 700);
-        PointOption point2 = new PointOption();
-        point2.withCoordinates(100, 700);
-        (new TouchAction(driver))
-                .longPress(point)
-                .moveTo(point2)
-                .release()
-                .perform();
-    }
-
     public void refreshSwipe() {
         PointOption point = new PointOption();
         point.withCoordinates(592, 523);

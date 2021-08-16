@@ -14,7 +14,7 @@ import io.qameta.allure.SeverityLevel;
 import tests.Authorization.LoginInter;
 
 
-@Severity(SeverityLevel.CRITICAL)
+@Severity(SeverityLevel.MINOR)
 @Feature("Bonuses")
 @Test
 
