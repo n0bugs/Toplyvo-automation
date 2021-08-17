@@ -12,7 +12,7 @@ import tests.Authorization.LoginInter;
 import java.net.MalformedURLException;
 
 @Feature("Buy vignette")
-@Severity(SeverityLevel.BLOCKER)
+@Severity(SeverityLevel.NORMAL)
 @Test
 public class vignettePayTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();

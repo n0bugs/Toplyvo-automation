@@ -14,6 +14,8 @@ public class SwipeHelper extends AndroidSetUp {
 
     public SelenideElement unableToView = $(By.id("l_expect_to_receive"));
 
+    public SelenideElement unableToViewShowMoreStep = $(By.id("headerPrimaryText"));
+
     public void refreshSwipe() {
         PointOption point = new PointOption();
         point.withCoordinates(592, 523);
@@ -95,6 +97,19 @@ public class SwipeHelper extends AndroidSetUp {
         point.withCoordinates(351, 1327);
         PointOption point2 = new PointOption();
         point2.withCoordinates(349, 418);
+        (new TouchAction(driver))
+                .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
+    public void ScrollToShowTicket(){
+        unableToViewShowMoreStep.shouldBe(visible);
+
+        PointOption point = new PointOption();
+        point.withCoordinates(335, 1346);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(382, 275);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)

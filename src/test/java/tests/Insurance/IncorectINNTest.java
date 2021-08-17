@@ -13,7 +13,7 @@ import tests.Authorization.LoginInter;
 import java.net.MalformedURLException;
 
 @Feature("Buy polis full filled/error check")
-@Severity(SeverityLevel.CRITICAL)
+@Severity(SeverityLevel.NORMAL)
 @Test
 public class IncorectINNTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
