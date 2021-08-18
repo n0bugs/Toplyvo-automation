@@ -434,6 +434,13 @@
             </properties>
         </profile>
 
+        <profile>
+            <id>VisualTestBuild</id>
+            <properties>
+                <suite.xml.file>VisualTesting.xml</suite.xml.file>
+            </properties>
+        </profile>
+
         <!--        PROD PARALLEL SUITES-->
 
 
