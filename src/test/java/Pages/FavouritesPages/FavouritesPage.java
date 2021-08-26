@@ -28,7 +28,14 @@ public class FavouritesPage {
 
     private final SelenideElement backBut = $(By.id("title_left_iv"));
 
-    private final SelenideElement favor = $(By.id("img_arrow_down"));
+    private final SelenideElement favor = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/" +
+            "android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
+            "androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/" +
+            "android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
+            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/" +
+            "android.widget.RelativeLayout"));
 
     private final SelenideElement firstdel = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[1]/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ImageView[2]"));
 

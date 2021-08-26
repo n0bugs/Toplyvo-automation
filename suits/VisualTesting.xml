@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="STAGE VISUAL TEST">
+    <test name="Visual testing build for device Samsung  A30S">
+
+        <parameter name="device" value="Samsung  A30S"/>
+        <parameter name="server" value="stage"/>
+
+        <classes>
+            <class name="tests.VisualTest.UslugiVisualTest"/>
+            <class name="tests.VisualTest.AccountVisualTest"/>
+        </classes>
+
+    </test>
+
+    <!-- Test -->
+</suite> <!-- Suite -->
