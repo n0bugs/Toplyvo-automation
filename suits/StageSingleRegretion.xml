@@ -19,6 +19,7 @@
              <class name="tests.Fuel.CheckGoToPaymentFavTest"/>
              <class name="tests.Fuel.LoadTicketTest"/>
 
+             <class name="tests.Fuel.ShareLiterWogTest"/>
              <class name="tests.Fuel.CheckOkkoFuelTest"/>
              <class name="tests.Fuel.buyfueOkkolTest"/>
 
@@ -30,6 +31,7 @@
              <class name="tests.Bonuses.shellCardTest"/>
              <class name="tests.Profile.socialNetworkCheck"/>
              <class name="tests.Profile.HelpFoundationTest"/>
+
 
         </classes>
 

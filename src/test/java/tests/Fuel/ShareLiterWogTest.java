@@ -1,6 +1,6 @@
 package tests.Fuel;
 
-import Pages.TicketPages.MoveTicketToActive;
+import Pages.BuyFuelPages.ShareLitersWOGPage;
 import io.qameta.allure.Story;
 import org.testng.annotations.Parameters;
 import common.AndroidSetUp;
@@ -13,20 +13,21 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.SeverityLevel;
 import tests.Authorization.LoginInter;
 
+
 @Severity(SeverityLevel.CRITICAL)
 @Feature("Tickets")
-public class AddTicketActive extends AndroidSetUp {
+public class ShareLiterWogTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
-    MoveTicketToActive atMoveTicketToActive = new MoveTicketToActive();
+    ShareLitersWOGPage atShareLitersWOGPage = new ShareLitersWOGPage();
 
     @Test
     @Story("Add ticket to active")
     @Parameters({"server"})
-    public void AddToActiveTest(String server) throws MalformedURLException, InterruptedException {
+    public void ShareTicketWogTest(String server) throws MalformedURLException, InterruptedException {
 
         atLoginInter.interSwitch(server);
 
-        atMoveTicketToActive.AddTicketToActive();
+        atShareLitersWOGPage.ShareWOGAction();
 
     }
 }
