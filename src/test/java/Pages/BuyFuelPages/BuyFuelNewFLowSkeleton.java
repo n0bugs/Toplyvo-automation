@@ -81,6 +81,7 @@ public class BuyFuelNewFLowSkeleton {
     }
 
     OKKOUser okkoUser = new OKKOUser("Ivan", "Crash", "1", "1998");
+
     public void BuyOKKOMethod() {
         try {
             buyFuelButton.shouldBe(visible).click();
