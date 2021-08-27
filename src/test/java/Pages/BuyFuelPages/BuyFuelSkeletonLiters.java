@@ -27,12 +27,12 @@ public class BuyFuelSkeletonLiters {
     private final SelenideElement tabletopSkip = $(By.id("btn_cancel"));
 
     public void buyFuelSkeletonLitersMethod() {
-        buyFuelButton.click();
-        a92OKKO.click();
-        inputLiters.sendKeys("10");
-        buyLiters.click();
-        tabletopSkip.click();
-        choosePayment.click();
+        buyFuelButton.shouldBe(visible).click();
+        a92OKKO.shouldBe(visible).click();
+        inputLiters.shouldBe(visible).sendKeys("10");
+        buyLiters.shouldBe(visible).click();
+        tabletopSkip.shouldBe(visible).click();
+        choosePayment.shouldBe(visible).click();
     }
 }
 
