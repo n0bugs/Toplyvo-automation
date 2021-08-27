@@ -3,12 +3,11 @@ package Pages.AuthorizationPages;
 import Helpers.RandomPhoneNumber;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class LoginPage extends AndroidSetUp {
+public class LoginPage {
 
     private final SelenideElement skipButtonclick = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
@@ -87,19 +86,4 @@ public class LoginPage extends AndroidSetUp {
         Authbut.setValue("111111");
         Contbut2.shouldBe(Condition.visible).click();
     }
-
-    public void loginVariables7() {
-        skipButtonclick.shouldBe(Condition.visible).click();
-        Phone.setValue("999999999");
-        Contbut.shouldBe(Condition.visible).click();
-        Authbut.setValue("111111");
-    }
-
-    public void loginVariables8() {
-        skipButtonclick.shouldBe(Condition.visible).click();
-        Phone.setValue("989898989");
-        Contbut.shouldBe(Condition.visible).click();
-        Authbut.setValue("111111");
-    }
-
 }

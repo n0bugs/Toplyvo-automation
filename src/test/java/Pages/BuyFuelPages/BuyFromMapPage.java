@@ -39,9 +39,6 @@ public class BuyFromMapPage {
         clickShellType.shouldBe(visible).click();
         imgPlus.shouldBe(visible).click();
         buyTicketsButton.shouldBe(visible).click();
-        if (tabletochkiSkip == tabletochkiSkip.shouldBe(visible)) {
-            tabletochkiSkip.click();
-        }
         choosePayment.shouldBe(visible).click();
     }
 }
