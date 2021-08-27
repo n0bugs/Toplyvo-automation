@@ -2,7 +2,6 @@ package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
 import Pages.BuyFuelPages.BuyFuelPage;
-import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
