@@ -30,6 +30,7 @@ public class MoveTicketToArchive extends AndroidSetUp {
         try {
             atSwipeHelper.DownSwipe1();
             atSwipeHelper.DownSwipe2();
+            atSwipeHelper.DownSwipe2();
             FindTicket.shouldBe(Condition.visible).click();
             TapMoveArchive.shouldBe(Condition.visible).click();
             ConfirmToMoveTicket.shouldHave(Condition.text("Перемещен"));

@@ -1,10 +1,11 @@
 package Pages.VignettePages;
 
-import Helpers.SwipeHelper;
+import UserModel.VignetteUser;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
 import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -78,68 +79,32 @@ public class VignetteScreen extends AndroidSetUp {
 
     private final SelenideElement tap_final_button = $(By.id("continueTV"));
 
-    SwipeHelper atSwipeHelper = new SwipeHelper();
-
     public void stepbuyVignette() {
-        tapUslugi
-                .shouldBe(Condition.visible).click();
-        butttonVignette
-                .shouldBe(Condition.visible).click();
-        buttonVignetteTV
-                .shouldBe(visible).click();
-        tap_location_car
-                .shouldBe(visible)
-                .click();
+        tapUslugi.shouldBe(Condition.visible).click();
+        butttonVignette.shouldBe(Condition.visible).click();
+        buttonVignetteTV.shouldBe(visible).click();
+        tap_location_car.shouldBe(visible).click();
     }
 
+    VignetteUser atVignetteUser = new VignetteUser("AR6794TR", "Test Test", "12321321");
+
     public void stepbuyVignette2() {
-        car_info
-                .shouldBe(visible)
-                .click();
-        car_location
-                .shouldBe(visible)
-                .click();
-        car_location_select
-                .shouldBe(visible)
-                        .click();
-        type_car
-                .shouldBe(visible)
-                        .click();
-        type_car_description
-                .shouldBe(visible)
-                        .click();
-        gosNumberCar
-                .shouldBe(visible)
-                        .sendKeys("AR6794TR");
-
-        continueTV
-                .click();
-
-        driverInfo
-                .shouldBe(visible)
-                        .click();
-
-        name
-                .sendKeys("Test Test");
-        inn
-                .sendKeys("12321321");
-        continueTV
-                .click();
-        orderVignetteET
-                .shouldBe(visible)
-                        .click();
-        personal_credit
-                .shouldBe(visible)
-                        .click();
-        final_purchase
-                .shouldBe(visible)
-                        .click();
-        check_buy_vignette
-                .shouldBe(visible);
-
-        tap_final_button
-                .shouldBe(visible)
-                        .click();
+        car_info.shouldBe(visible).click();
+        car_location.shouldBe(visible).click();
+        car_location_select.shouldBe(visible).click();
+        type_car.shouldBe(visible).click();
+        type_car_description.shouldBe(visible).click();
+        gosNumberCar.shouldBe(visible).sendKeys(atVignetteUser.getAutoNumber());
+        continueTV.shouldBe(visible).click();
+        driverInfo.shouldBe(visible).click();
+        name.shouldBe(visible).sendKeys(atVignetteUser.getNameSurname());
+        inn.shouldBe(visible).sendKeys(atVignetteUser.getINN());
+        continueTV.shouldBe(visible).click();
+        orderVignetteET.shouldBe(visible).click();
+        personal_credit.shouldBe(visible).click();
+        final_purchase.shouldBe(visible).click();
+        check_buy_vignette.shouldBe(visible);
+        tap_final_button.shouldBe(visible).click();
     }
 }
 

@@ -2,6 +2,7 @@ package Pages.PolisPages;
 
 import Helpers.RandomCarNumber;
 import Helpers.SwipeHelper;
+import UserModel.BuyPolisUser;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
@@ -146,20 +147,12 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.view.View/android.view.View/android.view.View/android.view.View[2]/" +
             "android.view.View[6]/android.view.View/android.view.View[3]"));
 
-    private final SelenideElement thankYouPage = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
-            "android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
-            "android.view.View/android.view.View/android.view.View[2]/android.view.View[2]"));
-
     private final SelenideElement confirmPurchase = $(By.id("continueTV"));
     // Сделано <-
     // Делаю ->
     private final SelenideElement send_email_polis = $(By.id("defaultId"));
 
     private final SelenideElement confirm_send_email = $(By.id("continueTV"));
-
-    private final SelenideElement title_header = $(By.id("ua.fuel.debug:id/title_tv"));
 
 //    Тут Локаторы для некоректного ввода
 
@@ -197,25 +190,6 @@ public class PolisPageFullFilled extends AndroidSetUp {
 
     private final SelenideElement error_check_inn = $(By.id("tv_description"));
 
-    private final SelenideElement birthDayLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
-            "android.widget.TextView"));
-
-    private final SelenideElement yearLocator = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
-            "android.widget.DatePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/" +
-            "android.widget.TextView[1]"));
-
-    private final SelenideElement year_18 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.DatePicker/android.widget.LinearLayout/" +
-            "android.widget.ScrollView/android.widget.ViewAnimator/android.widget.ListView/android.widget.TextView[8]"));
-
-    private final SelenideElement confirm_year = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/" +
-            "android.widget.Button[2]"));
-
     private final SelenideElement tap_passport = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
 
     private final SelenideElement choose1 = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.TextView\n"));
@@ -227,6 +201,9 @@ public class PolisPageFullFilled extends AndroidSetUp {
     private final SelenideElement errINNandReg = $(By.id("tv_description"));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
+
+
+    BuyPolisUser atBuyPolisUser = new BuyPolisUser("Lin", "1111111111", "VSKTVUR20U02226389");
 
     public void stepBuyPolis() {
         try {
@@ -275,10 +252,12 @@ public class PolisPageFullFilled extends AndroidSetUp {
         errINNandReg.shouldHave(text("- Формат Регистрационный номер недействителен. - Тип документа не соответствует льготам"));
     }
 
+
+
     public void StepFullFilled() {
         auto_mark_filled.click();
         inputET.click();
-        inputET.sendKeys("Lin");
+        inputET.sendKeys(atBuyPolisUser.getModelAuto());
         selector_auto_tap.shouldBe(visible).click();
         auto_model_filled.click();
         auto_model_filled_aviator.shouldBe(visible).click();
@@ -304,9 +283,7 @@ public class PolisPageFullFilled extends AndroidSetUp {
         cardNumbreType.shouldBe(visible).sendKeys("4242424242424242");
         card_date_polis.shouldBe(visible).sendKeys("1224");
         cardCvvPolis.shouldBe(visible).sendKeys("123");
-        continue_button_credit_card_polis.waitUntil(visible, 53000).click();
-//        thankYouPage.waitUntil(visible, 53000).click();
-
+        continue_button_credit_card_polis.shouldBe(visible).click();
     }
 
     public void checkPurchasePolis() {
@@ -319,14 +296,14 @@ public class PolisPageFullFilled extends AndroidSetUp {
     public void skeleton_full_filled() {
         auto_mark_filled.click();
         inputET.click();
-        inputET.sendKeys("Lin");
+        inputET.sendKeys(atBuyPolisUser.getModelAuto());
         selector_auto_tap.shouldBe(visible).click();
         auto_model_filled.click();
         auto_model_filled_aviator.shouldBe(visible).click();
         type_car_global.shouldBe(visible).click();
         choose_car_type.click();
         vin_code_tap.shouldBe(visible).click();
-        vin_code_fill.shouldBe(visible).sendKeys("VSKTVUR20U02226389");
+        vin_code_fill.shouldBe(visible).sendKeys(atBuyPolisUser.getVIN());
         save_vin_code.shouldBe(visible).click();
         save_date_auto.shouldBe(visible).click();
         choose_franshize.shouldBe(visible).click();
@@ -349,7 +326,7 @@ public class PolisPageFullFilled extends AndroidSetUp {
         try {
             tap_insurer_name.shouldBe(visible).click();
             inn_field.shouldBe(visible).clear();
-            inn_field.shouldBe(visible).sendKeys("1111111111");
+            inn_field.shouldBe(visible).sendKeys(atBuyPolisUser.getINN());
             cont_btn_after_fill_inn.shouldBe(visible).click();
             payButton.shouldBe(visible).click();
             error_check_inn.shouldBe(visible).shouldHave(text("- Формат ИНН недействителен."));

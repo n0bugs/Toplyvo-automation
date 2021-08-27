@@ -24,7 +24,6 @@ public class buyfueOkkolTest extends AndroidSetUp {
     public LoginInter atLoginInter = new LoginInter();
     BuyFuelSkeletonLiters atBuyFuelSkeletonLiters = new BuyFuelSkeletonLiters();
     BuyFuelPage atBuyFuelPage = new BuyFuelPage();
-    BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 
     @Parameters({"server"})
     @Story("Buy liters okko with personal credit")

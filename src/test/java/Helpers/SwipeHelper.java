@@ -103,13 +103,26 @@ public class SwipeHelper extends AndroidSetUp {
                 .release()
                 .perform();
     }
-    public void ScrollToShowTicket(){
+
+    public void ScrollToShowTicket() {
         unableToViewShowMoreStep.shouldBe(visible);
 
         PointOption point = new PointOption();
         point.withCoordinates(335, 1346);
         PointOption point2 = new PointOption();
         point2.withCoordinates(382, 275);
+        (new TouchAction(driver))
+                .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
+
+    public void refreshArhive() {
+        PointOption point = new PointOption();
+        point.withCoordinates(347, 410);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(329, 945);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)

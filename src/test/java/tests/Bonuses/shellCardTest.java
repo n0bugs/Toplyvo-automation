@@ -6,7 +6,6 @@ import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
 import io.qameta.allure.Story;
 import io.qameta.allure.Severity;
 import io.qameta.allure.Feature;

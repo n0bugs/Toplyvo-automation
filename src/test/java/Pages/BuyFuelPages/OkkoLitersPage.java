@@ -38,6 +38,7 @@ public class OkkoLitersPage {
     public void CheckLiter() {
         try {
             atSwipeHelper.DownSwipe1();
+            atSwipeHelper.DownSwipe2();
             firstOKKO.shouldBe(visible).click();
             checkQR.shouldBe(visible);
             checkText.shouldHave(text("1. Перед заправкой покажите, пожалуйста, QR-код кассиру и укажите количество" +

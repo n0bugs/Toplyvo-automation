@@ -40,7 +40,7 @@ public class BuyFromMapPage {
         imgPlus.shouldBe(visible).click();
         buyTicketsButton.shouldBe(visible).click();
         if (tabletochkiSkip == tabletochkiSkip.shouldBe(visible)) {
-            tabletochkiSkip.click();
+            tabletochkiSkip.shouldBe(visible).click();
         }
         choosePayment.shouldBe(visible).click();
     }

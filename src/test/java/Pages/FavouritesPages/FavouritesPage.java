@@ -56,12 +56,6 @@ public class FavouritesPage {
             "android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout"));
 
-    private final SelenideElement checkMethodType = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
-            "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/" +
-            "android.widget.TextView"));
-
 
     public void FavouritesPageAction() {
         try {
@@ -71,14 +65,14 @@ public class FavouritesPage {
             wogAddFavour.shouldBe(visible).click();
             backBut.shouldBe(visible).click();
         } catch (Exception e) {
-            System.out.println("Не удалось добавить в избранное");
+            e.printStackTrace();
         }
         try {
             favor.shouldBe(visible).click();
             firstdel.shouldBe(visible).click();
             seconddel.shouldBe(visible).click();
         } catch (Exception e) {
-            System.out.println("Не удалось удалить или найти избранное");
+            e.printStackTrace();
         }
     }
 
