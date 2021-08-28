@@ -16,6 +16,8 @@ public class SwipeHelper extends AndroidSetUp {
 
     public SelenideElement unableToViewShowMoreStep = $(By.id("headerPrimaryText"));
 
+    public SelenideElement unableToViewPortmone = $(By.id("swipe"));
+
     public void refreshSwipe() {
         PointOption point = new PointOption();
         point.withCoordinates(592, 523);
@@ -123,6 +125,20 @@ public class SwipeHelper extends AndroidSetUp {
         point.withCoordinates(347, 410);
         PointOption point2 = new PointOption();
         point2.withCoordinates(329, 945);
+        (new TouchAction(driver))
+                .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
+
+    public void deletePortmoneCardSwiper(){
+        unableToViewPortmone.shouldBe(visible);
+
+        PointOption point = new PointOption();
+        point.withCoordinates(623, 260);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(106, 257);
         (new TouchAction(driver))
                 .longPress(point)
                 .moveTo(point2)

@@ -31,6 +31,8 @@
              <class name="tests.Bonuses.shellCardTest"/>
              <class name="tests.Profile.socialNetworkCheck"/>
              <class name="tests.Profile.HelpFoundationTest"/>
+            <class name="tests.Profile.AddPortmoneCardTest"/>
+
         </classes>
 
     </test>
