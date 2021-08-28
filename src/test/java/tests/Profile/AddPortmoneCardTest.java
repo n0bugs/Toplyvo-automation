@@ -24,7 +24,7 @@ public class AddPortmoneCardTest extends AndroidSetUp {
     @Test
     @Story("Add Portmone Card")
     @Parameters({"server"})
-    public void AddPortmoneCardTest(String server) throws MalformedURLException, InterruptedException {
+    public void addPortmoneCardTest(String server) throws MalformedURLException, InterruptedException {
         atLoginInter.interSwitch(server);
 
         atAddPortmoneCardPage.AddPortmoneCardAction();

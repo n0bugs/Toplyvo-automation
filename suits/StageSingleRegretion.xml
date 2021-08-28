@@ -12,8 +12,8 @@
              <class name="tests.Fuel.buycreditcardTest"/>
              <class name="tests.Fuel.buyfuelportmoneTest"/>
 
-            <class name="tests.Fuel.TicketAddArchiveTest"/>
-            <class name="tests.Fuel.AddTicketActive"/>
+             <class name="tests.Fuel.TicketAddArchiveTest"/>
+             <class name="tests.Fuel.AddTicketActive"/>
              <class name="tests.Fuel.CheckIfWaitForTicketsExistTest"/>
              <class name="tests.Fuel.CheckGoToPaymentFavTest"/>
              <class name="tests.Fuel.LoadTicketTest"/>
@@ -31,7 +31,7 @@
              <class name="tests.Bonuses.shellCardTest"/>
              <class name="tests.Profile.socialNetworkCheck"/>
              <class name="tests.Profile.HelpFoundationTest"/>
-            <class name="tests.Profile.AddPortmoneCardTest"/>
+             <class name="tests.Profile.AddPortmoneCardTest"/>
 
         </classes>
 
