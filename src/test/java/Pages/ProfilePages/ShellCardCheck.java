@@ -2,7 +2,10 @@ package Pages.ProfilePages;
 
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.SelenideElement;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
+
+import java.util.Locale;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -36,14 +39,14 @@ public class ShellCardCheck {
     private final SelenideElement showCreateCard = $(By.id("cardImage"));
 
     SwipeHelper atSwipeHelper = new SwipeHelper();
+    Faker atFaker = new Faker(new Locale("uk", "UA"));
 
     public void ShellCard() throws InterruptedException {
-
         account.shouldBe(visible).click();
         wearemarket.shouldBe(visible).click();
         ShellCardBut.shouldBe(visible).click();
-        Surname.shouldBe(visible).sendKeys("Cherkash");
-        Name.shouldBe(visible).sendKeys("Ivan");
+        Surname.shouldBe(visible).sendKeys(atFaker.name().lastName());
+        Name.shouldBe(visible).sendKeys(atFaker.name().firstName());
         birthDate.shouldBe(visible).click();
         year.shouldBe(visible).click();
         Thread.sleep(3000);
