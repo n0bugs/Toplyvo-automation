@@ -2,12 +2,12 @@ package Pages.PolisPages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PolisPage extends AndroidSetUp {
+public class PolisPage {
     private final SelenideElement tapUslugi = $(By.id("service_tab"));
 
     private final SelenideElement OSAGO = $(By.id("rlInsurance"));
@@ -53,7 +53,7 @@ public class PolisPage extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView[2]"));
 
-    private final SelenideElement cardNumbreType =$(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement cardNumbreType = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
@@ -98,7 +98,7 @@ public class PolisPage extends AndroidSetUp {
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText"));
 
-    private final SelenideElement contPurchasse= $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement contPurchasse = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.TextView[2]"));
@@ -131,13 +131,13 @@ public class PolisPage extends AndroidSetUp {
     public void stepBuyPolis() {
         tapUslugi
                 .shouldBe(Condition.visible)
-                            .click();
+                .click();
         OSAGO
                 .shouldBe(Condition.visible)
-                            .click();
+                .click();
         buyInsuranceButton
                 .shouldBe(visible)
-                            .click();
+                .click();
 
         fill_autonumber.shouldBe(visible).click();
         tap_number_auto.shouldBe(visible).click();
@@ -160,7 +160,8 @@ public class PolisPage extends AndroidSetUp {
         thankYouPage.waitUntil(visible, 53000).click();
 
     }
-    public void checkPurchasePolis(){
+
+    public void checkPurchasePolis() {
         contPurchasse.shouldBe(visible).click();
         send_email_polis.shouldBe(visible).clear();
         send_email_polis.shouldBe(visible).sendKeys("melnikm078@gmail.com");

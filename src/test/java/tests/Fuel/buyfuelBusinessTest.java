@@ -2,7 +2,6 @@ package tests.Fuel;
 
 import Pages.BuyFuelPages.BuyFuelByBusinessPage;
 import Pages.BuyFuelPages.BuyFuelNewFLowSkeleton;
-import Pages.BuyFuelPages.ByFuelSkeleton;
 import common.AndroidSetUp;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -20,7 +19,6 @@ import tests.Authorization.LoginInter;
 public class buyfuelBusinessTest extends AndroidSetUp {
 
     public LoginInter atLoginInter = new LoginInter();
-    ByFuelSkeleton atByFuelSkeleton = new ByFuelSkeleton();
     BuyFuelByBusinessPage atBuyFuelByBusinessPage = new BuyFuelByBusinessPage();
     BuyFuelNewFLowSkeleton atBuyFuelNewFLowSkeleton = new BuyFuelNewFLowSkeleton();
 

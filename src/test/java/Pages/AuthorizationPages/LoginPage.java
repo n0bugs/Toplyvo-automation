@@ -3,7 +3,10 @@ package Pages.AuthorizationPages;
 import Helpers.RandomPhoneNumber;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
+
+import java.util.Locale;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -49,6 +52,7 @@ public class LoginPage {
 
 
     RandomPhoneNumber atRandomPhoneNumber = new RandomPhoneNumber();
+
 
     public void loginVariables1() {
         skipButtonclick.shouldBe(Condition.visible).click();

@@ -19,7 +19,7 @@ public class AllureEnv {
         }
         try {
             FileWriter myWriter = new FileWriter("target/allure-results/environment.xml");
-            myWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?><environment><parameter><key>Build server</key><value>Stage</value></parameter><parameter><key>Build.Version</key><value>TOPLYVO_UA_toplyvoDebug_2_7_43__26_08_21_09_57</value></parameter><parameter><key>URL backend</key><value>https://stage.develop.toplyvo.app/admin</value></parameter></environment>");
+            myWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?><environment><parameter><key>Build server</key><value>Stage</value></parameter><parameter><key>Build.Version</key><value>TOPLYVO_UA_toplyvoDebug_2_7_45_debug_testfeature_01_09_21_17_39</value></parameter><parameter><key>URL backend</key><value>https://stage.develop.toplyvo.app/admin</value></parameter></environment>");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {

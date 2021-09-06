@@ -66,6 +66,8 @@ public class BuyFuelPage {
         btnContinueAfterBuy.click();
 
     }
+
+
 }
 
 
