@@ -40,7 +40,7 @@ public class BuyFuelPage {
 
     public SelenideElement payTickets = $(By.id("tv_pay_tickets"));
 
-    public void BuyFueel() {
+    public void BuyFuel() {
         try {
             personalMoney.shouldBe(visible).click();
             confirmPurchase.shouldBe(visible).click();

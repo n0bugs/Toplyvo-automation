@@ -30,7 +30,7 @@ public class buyfueltabletochki extends AndroidSetUp {
 
         atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethodPositive();
 
-        atBuyFuelPage.BuyFueel();
+        atBuyFuelPage.BuyFuel();
 
     }
 }

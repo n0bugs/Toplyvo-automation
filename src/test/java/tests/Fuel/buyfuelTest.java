@@ -30,7 +30,7 @@ public class buyfuelTest extends AndroidSetUp {
 
         atBuyFuelNewFLowSkeleton.buyFuelSkeletonMethod();
 
-        atBuyFuelPage.BuyFueel();
+        atBuyFuelPage.BuyFuel();
 
     }
 

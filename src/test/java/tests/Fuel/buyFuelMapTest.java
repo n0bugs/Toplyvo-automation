@@ -30,7 +30,7 @@ public class buyFuelMapTest extends AndroidSetUp {
 
         atbuyFromMap.BuyFuelMap();
 
-        atBuyFuelPage.BuyFueel();
+        atBuyFuelPage.BuyFuel();
 
     }
 
