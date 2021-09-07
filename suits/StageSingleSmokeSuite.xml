@@ -6,8 +6,10 @@
         <parameter name="server" value="stage"/>
 
         <classes>
+
+<!--            <class name="tests.Fuel.SwipeTicketToArchiveTest"/>-->
 <!--            <class name="tests.Fuel.buyfuelTest"/>-->
-<!--            <class name="tests.Fuel.FilterTest" />-->
+            <class name="tests.Fuel.FilterTest" />
 <!--            <class name="tests.Fuel.BuyNewUserOKKOTest"/>-->
 <!--            <class name="tests.Bonuses.shellCardTest"/>-->
         </classes>

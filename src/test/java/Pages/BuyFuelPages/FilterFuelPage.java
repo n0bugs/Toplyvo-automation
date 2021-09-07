@@ -13,13 +13,13 @@ public class FilterFuelPage {
 
     private final SelenideElement dropImage = $(By.id("dropImage"));
 
-
     public void filterFuel() {
         btn_buy_tickets.shouldBe(visible).click();
         filterActionBtn.shouldBe(visible).click();
         clickAllItems();
         filterActionBtn.shouldBe(visible).click();
         dropImage.shouldBe(visible);
+        clickAllFuel();
     }
 
     private void clickAllItems() {
@@ -29,7 +29,22 @@ public class FilterFuelPage {
             index++;
             String xpathValue = String.format(xpathValueMask, index);
             SelenideElement element = $(By.xpath(xpathValue));
-            if (element.exists()) {
+            if (element.isDisplayed()) {
+                element.shouldBe(visible).click();
+            } else {
+                break;
+            }
+        }
+    }
+
+    private void clickAllFuel(){
+        String xpathValueMaskFuel = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[@index='%s']";
+        int index = 0;
+        while (true) {
+            index++;
+            String xpathValue = String.format(xpathValueMaskFuel, index);
+            SelenideElement element = $(By.xpath(xpathValue));
+            if (element.isDisplayed()) {
                 element.shouldBe(visible).click();
             } else {
                 break;
@@ -37,4 +52,3 @@ public class FilterFuelPage {
         }
     }
 }
-

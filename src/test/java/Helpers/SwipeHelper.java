@@ -132,7 +132,7 @@ public class SwipeHelper extends AndroidSetUp {
                 .perform();
     }
 
-    public void deletePortmoneCardSwiper(){
+    public void deletePortmoneCardSwiper() {
         unableToViewPortmone.shouldBe(visible);
 
         PointOption point = new PointOption();
@@ -141,6 +141,30 @@ public class SwipeHelper extends AndroidSetUp {
         point2.withCoordinates(106, 257);
         (new TouchAction(driver))
                 .longPress(point)
+                .moveTo(point2)
+                .release()
+                .perform();
+    }
+
+    public void swipeToArchive() {
+        unableToViewShowMoreStep.shouldBe(visible);
+
+        PointOption point = new PointOption();
+        point.withCoordinates(144, 747);
+        (new TouchAction(driver))
+                .longPress(point)
+                .release()
+                .perform();
+
+    }
+
+    public void swipeScreenToArchive() {
+        PointOption point = new PointOption();
+        point.withCoordinates(645, 436);
+        PointOption point2 = new PointOption();
+        point2.withCoordinates(71, 434);
+        (new TouchAction(driver))
+                .press(point)
                 .moveTo(point2)
                 .release()
                 .perform();
