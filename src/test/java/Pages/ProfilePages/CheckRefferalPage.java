@@ -22,7 +22,7 @@ public class CheckRefferalPage {
     public void checkrefpesonal() {
         bonusesButton.shouldBe(visible).click();
         continuebtn.shouldBe(visible).click();
-        check_spend_bonus.shouldHave(text("290"));
+        check_spend_bonus.shouldHave(text("0"));
         ref_person_btn.shouldBe(visible).click();
         check_invite_people.shouldHave(text("5"));
     }
