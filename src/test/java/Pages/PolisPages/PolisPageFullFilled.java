@@ -35,12 +35,7 @@ public class PolisPageFullFilled extends AndroidSetUp {
             "android.view.ViewGroup/android.widget.LinearLayout/android.widget.LinearLayout/" +
             "androidx.recyclerview.widget.RecyclerView/android.widget.TextView[1]"));
 
-
-//    Todo сделать полное заполнение полей по номеру авто
-
-
     private final SelenideElement calc_polis = $(By.id("continueTV"));
-
 
     private final SelenideElement auto_mark_filled = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +

@@ -16,7 +16,6 @@ import tests.Authorization.LoginInter;
 @Severity(SeverityLevel.MINOR)
 @Feature("Bonuses")
 @Test
-
 public class shellCardTest extends AndroidSetUp {
 
     public LoginPage atLoginPage = new LoginPage();
@@ -24,8 +23,8 @@ public class shellCardTest extends AndroidSetUp {
     public ShellCardCheck atShellCardCheck = new ShellCardCheck();
 
     @Parameters({"server"})
-    @Story("check shell loyaliti card")
-    public void bonusTest() throws InterruptedException {
+    @Story("check shell loyality card")
+    public void registerShellCardTest() throws InterruptedException {
 
         atLoginPage.loginVariables4();
 
