@@ -202,25 +202,16 @@ public class PolisPageFullFilled extends AndroidSetUp {
 
     public void stepBuyPolis() {
         try {
-            tapUslugi
-                    .shouldBe(Condition.visible).click();
-            OSAGO
-                    .shouldBe(Condition.visible).click();
-            buyInsuranceButton
-                    .shouldBe(visible).click();
-            fill_autonumber
-                    .shouldBe(visible).click();
-            fill_autonumber_1
-                    .click();
+            tapUslugi.shouldBe(Condition.visible).click();
+            OSAGO.shouldBe(Condition.visible).click();
+            buyInsuranceButton.shouldBe(visible).click();
+            fill_autonumber.shouldBe(visible).click();
+            fill_autonumber_1.click();
             RandomCarNumber atRandomCarNumber = new RandomCarNumber();
-            fill_autonumber_1
-                    .sendKeys(atRandomCarNumber.main());
-            btn_save_auto
-                    .shouldBe(visible).click();
-            choose_city
-                    .shouldBe(visible).click();
-            calc_polis
-                    .shouldBe(visible).click();
+            fill_autonumber_1.sendKeys(atRandomCarNumber.main());
+            btn_save_auto.shouldBe(visible).click();
+            choose_city.shouldBe(visible).click();
+            calc_polis.shouldBe(visible).click();
         } catch (Exception e) {
             e.printStackTrace();
         }
