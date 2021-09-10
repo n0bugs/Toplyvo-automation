@@ -62,17 +62,10 @@ public class AndroidSetUp {
   Init builder from appium server
 */
             AppiumServiceBuilder builder = new AppiumServiceBuilder();
-            /*
-                Init path to execute Jenkins CI - APPIUM JS script
-            */
-            builder.usingDriverExecutable(new File("/usr/local/bin/node"));
-            builder.withAppiumJS(
-                new File(
-                        "/Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js"));
             builder.withIPAddress(SERVER_IP3);
             builder.usingPort(PORT);
             builder.withCapabilities(cap);
-
+            builder.withAppiumJS(new File("../../../../usr/local/lib/node_modules/appium/build/lib/main.js"));
             builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
             builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
 
