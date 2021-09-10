@@ -61,7 +61,7 @@ public class AndroidSetUp {
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
 
-            String appuimMainPath = "/usr/local/lib/node_modules/appium/build/lib/main.js";
+            String appuimMainPath = "src/test/resources/build/a/main.js";
             File appuimMainJs = new File(appuimMainPath);
             builder = new AppiumServiceBuilder();
             builder.withAppiumJS(new File(appuimMainJs.getAbsolutePath()));
