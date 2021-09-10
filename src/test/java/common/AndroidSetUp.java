@@ -60,20 +60,6 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-
-            String appuimMainPath = "src/test/resources/build/a/main.js";
-            File appuimMainJs = new File(appuimMainPath);
-            builder = new AppiumServiceBuilder();
-            builder.withAppiumJS(new File(appuimMainJs.getAbsolutePath()));
-            builder.withIPAddress(SERVER_IP3);
-            builder.usingPort(PORT);
-            builder.withCapabilities(cap);
-
-            builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-            builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
-
-            service = AppiumDriverLocalService.buildService(builder);
-            service.start();
 //
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
             WebDriverRunner.setWebDriver(driver);
@@ -133,6 +119,5 @@ public class AndroidSetUp {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         closeWebDriver();
-        service.stop();
     }
 }
