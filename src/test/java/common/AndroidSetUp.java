@@ -10,6 +10,9 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
@@ -22,6 +25,10 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class AndroidSetUp {
     private static final String KEY = "server";
     protected static AppiumDriver<MobileElement> driver;
+
+    AppiumDriverLocalService service;
+    final String SERVER_IP3 = "127.0.0.1";
+    final int PORT = 4723;
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"device", "server"})
@@ -51,7 +58,21 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+/*
+  Инициализация билдера appium сервера
+*/
+            AppiumServiceBuilder builder = new AppiumServiceBuilder();
+            builder.withIPAddress(SERVER_IP3);
+            builder.usingPort(PORT);
+            builder.withCapabilities(cap);
+
+            builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+            builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
+
+            service = AppiumDriverLocalService.buildService(builder);
+            service.start();
+
+            driver = new AndroidDriver<>(service.getUrl(), cap);
             WebDriverRunner.setWebDriver(driver);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             SelenideLogger
@@ -107,5 +128,6 @@ public class AndroidSetUp {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         closeWebDriver();
+        service.stop();
     }
 }
