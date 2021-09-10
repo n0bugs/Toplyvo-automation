@@ -65,7 +65,6 @@ public class AndroidSetUp {
             builder.withIPAddress(SERVER_IP3);
             builder.usingPort(PORT);
             builder.withCapabilities(cap);
-            builder.withAppiumJS(new File("../../../../usr/local/lib/node_modules/appium/build/lib/main.js"));
             builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
             builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
 
