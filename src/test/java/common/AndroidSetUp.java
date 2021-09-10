@@ -10,9 +10,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
@@ -25,12 +22,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class AndroidSetUp {
     private static final String KEY = "server";
     protected static AppiumDriver<MobileElement> driver;
-
-    AppiumDriverLocalService service;
-    private AppiumServiceBuilder builder;
-
-    final String SERVER_IP3 = "127.0.0.1";
-    final int PORT = 4723;
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"device", "server"})
