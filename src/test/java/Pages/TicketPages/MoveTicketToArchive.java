@@ -3,12 +3,11 @@ package Pages.TicketPages;
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class MoveTicketToArchive extends AndroidSetUp {
+public class MoveTicketToArchive {
 
     private final SelenideElement FindTicket = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +

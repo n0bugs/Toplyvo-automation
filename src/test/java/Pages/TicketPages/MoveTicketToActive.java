@@ -2,14 +2,12 @@ package Pages.TicketPages;
 
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MoveTicketToActive extends AndroidSetUp {
+public class MoveTicketToActive {
 
     private final SelenideElement btn_arhive = $(By.xpath("//android.widget.LinearLayout[@content-desc=\"Архив\"]/" +
             "android.widget.LinearLayout/android.widget.TextView\n"));

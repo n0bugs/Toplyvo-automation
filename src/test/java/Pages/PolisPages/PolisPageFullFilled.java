@@ -5,7 +5,6 @@ import Helpers.SwipeHelper;
 import UserModel.BuyPolisUser;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 import Helpers.RandomVinNumberGenerator;
 
@@ -13,7 +12,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PolisPageFullFilled extends AndroidSetUp {
+public class PolisPageFullFilled {
     private final SelenideElement tapUslugi = $(By.id("service_tab"));
 
     private final SelenideElement OSAGO = $(By.id("rlInsurance"));
@@ -237,7 +236,6 @@ public class PolisPageFullFilled extends AndroidSetUp {
         payment_button_polis.shouldBe(visible).click();
         errINNandReg.shouldHave(text("- Формат Регистрационный номер недействителен. - Тип документа не соответствует льготам"));
     }
-
 
 
     public void StepFullFilled() {

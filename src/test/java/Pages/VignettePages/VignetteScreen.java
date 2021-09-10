@@ -3,13 +3,12 @@ package Pages.VignettePages;
 import UserModel.VignetteUser;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class VignetteScreen extends AndroidSetUp {
+public class VignetteScreen {
     private final SelenideElement tapUslugi = $(By.id("service_tab"));
 
     private final SelenideElement butttonVignette = $(By.id("rlRoadPayment"));

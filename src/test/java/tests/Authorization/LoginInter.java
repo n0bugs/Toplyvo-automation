@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
+
 @Severity(SeverityLevel.CRITICAL)
 @Feature("Login with valid otp-code")
 @Test

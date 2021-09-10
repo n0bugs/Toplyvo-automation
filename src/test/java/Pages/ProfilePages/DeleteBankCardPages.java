@@ -3,28 +3,27 @@ package Pages.ProfilePages;
 import Helpers.SwipeHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import common.AndroidSetUp;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
-public class DeleteBankCardPages extends AndroidSetUp {
+public class DeleteBankCardPages {
 
-    private SelenideElement tap_profile = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement tap_profile = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/" +
             "android.widget.LinearLayout/android.widget.FrameLayout[5]"));
 
-    private SelenideElement marketplase_modal = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private final SelenideElement marketplase_modal = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[4]"));
 
-    private SelenideElement profile_bank_card = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+    private final SelenideElement profile_bank_card = $(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/" +
             "android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.ScrollView/" +
             "android.widget.LinearLayout/android.widget.TextView[2]"));
 
 
-    private SelenideElement confirm_delete_card = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
+    private final SelenideElement confirm_delete_card = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/" +
             "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[3]"));
