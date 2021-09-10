@@ -26,10 +26,6 @@ public class AndroidSetUp {
     private static final String KEY = "server";
     protected static AppiumDriver<MobileElement> driver;
 
-    AppiumDriverLocalService service;
-    final String SERVER_IP3 = "127.0.0.1";
-    final int PORT = 4723;
-
     @BeforeClass(alwaysRun = true)
     @Parameters({"device", "server"})
     public void setUP(String device, String server) throws Exception {
@@ -58,20 +54,8 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-/*
-  Init builder from appium server
-*/
-            AppiumServiceBuilder builder = new AppiumServiceBuilder();
-            builder.withIPAddress(SERVER_IP3);
-            builder.usingPort(PORT);
-            builder.withCapabilities(cap);
-            builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-            builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
 
-            service = AppiumDriverLocalService.buildService(builder);
-            service.start();
-
-            driver = new AndroidDriver<>(service.getUrl(), cap);
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
             WebDriverRunner.setWebDriver(driver);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             SelenideLogger
@@ -102,6 +86,8 @@ public class AndroidSetUp {
             capabilities.setCapability("language", "RU");
             capabilities.setCapability("locale", "RU");
             capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
+
+
             driver = new AndroidDriver<>(new URL("http://0.0.0.0:4724/wd/hub"), capabilities);
             WebDriverRunner.setWebDriver(driver);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -127,6 +113,5 @@ public class AndroidSetUp {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         closeWebDriver();
-        service.stop();
     }
 }
