@@ -59,9 +59,16 @@ public class AndroidSetUp {
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
 /*
-  Инициализация билдера appium сервера
+  Init builder from appium server
 */
             AppiumServiceBuilder builder = new AppiumServiceBuilder();
+            /*
+                Init path to execute Jenkins CI - APPIUM JS script
+            */
+            builder.usingDriverExecutable(new File("/usr/local/bin/node"));
+            builder.withAppiumJS(
+                new File(
+                        "/Applications/Appium.app/Contents/Resources/app/node_modules/appium/build/lib/main.js"));
             builder.withIPAddress(SERVER_IP3);
             builder.usingPort(PORT);
             builder.withCapabilities(cap);
