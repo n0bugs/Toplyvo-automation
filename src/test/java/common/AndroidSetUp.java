@@ -55,7 +55,7 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-//
+// Удалить при мерже
 //            service = new AppiumServiceBuilder()
 //                    .withCapabilities(cap)
 //                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
@@ -76,7 +76,7 @@ public class AndroidSetUp {
             if (value.equalsIgnoreCase("stage")) {
                 String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_46_debug_testfeature_07_09_21_16_33.apk";
                 File app = new File(apk_path);
-                System.out.println("Stage build");
+                System.out.println("Start on stage build");
                 capabilities.setCapability("appPackage", "ua.fuel.debug");
                 capabilities.setCapability("app", app.getAbsolutePath());
             } else {
@@ -121,6 +121,6 @@ public class AndroidSetUp {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         closeWebDriver();
-        service.stop();
+//        service.stop();
     }
 }
