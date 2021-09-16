@@ -55,13 +55,13 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-// Удалить при мерже
-            service = new AppiumServiceBuilder()
-                    .withCapabilities(cap)
-                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
-                    .withArgument(GeneralServerFlag.LOG_LEVEL,"error")
-                    .build();
-            service.start();
+//
+//            service = new AppiumServiceBuilder()
+//                    .withCapabilities(cap)
+//                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+//                    .withArgument(GeneralServerFlag.LOG_LEVEL,"error")
+//                    .build();
+//            service.start();
 //
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
             WebDriverRunner.setWebDriver(driver);
