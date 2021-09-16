@@ -84,11 +84,6 @@ public class PolisPage {
             "android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/" +
             "android.view.View/android.view.View/android.view.View[2]/android.view.View[2]"));
 
-    public SelenideElement confirmPurchase = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
-            "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
-            "android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
-            "android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"));
-
     private final SelenideElement send_email_polis = $(By.xpath("/hierarchy/android.widget.FrameLayout/" +
             "android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/" +
             "android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/" +
@@ -156,9 +151,8 @@ public class PolisPage {
         cardNumbreType.shouldBe(visible).sendKeys("4242424242424242");
         card_date_polis.shouldBe(visible).sendKeys("1224");
         cardCvvPolis.shouldBe(visible).sendKeys("123");
-        continue_button_credit_card_polis.waitUntil(visible, 53000).click();
-        thankYouPage.waitUntil(visible, 53000).click();
-
+        continue_button_credit_card_polis.shouldBe(visible).click();
+        thankYouPage.shouldBe(visible).click();
     }
 
     public void checkPurchasePolis() {
@@ -168,12 +162,4 @@ public class PolisPage {
         confirm_send_email.shouldBe(visible).click();
         title_header.shouldBe(visible);
     }
-
 }
-
-
-//
-
-//
-
-//

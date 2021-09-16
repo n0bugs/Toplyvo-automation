@@ -2,12 +2,17 @@ package Helpers;
 
 import com.codeborne.selenide.SelenideElement;
 import common.AndroidSetUp;
+import io.appium.java_client.MultiTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import io.appium.java_client.TouchAction;
+import org.openqa.selenium.Dimension;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static io.appium.java_client.touch.WaitOptions.waitOptions;
+import static io.appium.java_client.touch.offset.PointOption.point;
+import static java.time.Duration.ofMillis;
 
 
 public class SwipeHelper extends AndroidSetUp {
@@ -30,6 +35,17 @@ public class SwipeHelper extends AndroidSetUp {
                 .perform();
     }
 
+    public void refreshSwipe2() {
+        TouchAction touch = new TouchAction(driver);
+        Dimension size = driver.manage().window().getSize();
+        int edgeBorder = 10;
+        sleep(2000);
+        touch
+                .press(point(size.width / 2, size.height / 2))
+                .waitAction(waitOptions(ofMillis(5000)))
+                .moveTo(point(size.width / 2, size.height - edgeBorder)).release().perform();
+    }
+
     public void DownSwipe() {
         PointOption point = new PointOption();
         point.withCoordinates(612, 1374);
@@ -42,18 +58,6 @@ public class SwipeHelper extends AndroidSetUp {
                 .perform();
 
 
-    }
-
-    public void UpSwipe() {
-        PointOption point = new PointOption();
-        point.withCoordinates(300, 500);
-        PointOption point2 = new PointOption();
-        point2.withCoordinates(300, 1000);
-        (new TouchAction(driver))
-                .longPress(point)
-                .moveTo(point2)
-                .release()
-                .perform();
     }
 
     public void SwipeDeleteCard() {

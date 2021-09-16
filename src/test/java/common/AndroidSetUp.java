@@ -10,6 +10,9 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
@@ -22,6 +25,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class AndroidSetUp {
     private static final String KEY = "server";
     protected static AppiumDriver<MobileElement> driver;
+    AppiumDriverLocalService service;
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"device", "server"})
@@ -31,7 +35,7 @@ public class AndroidSetUp {
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
             System.out.println("server is eq = " + value);
             if (value.equalsIgnoreCase("stage")) {
-                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_46_debug_testfeature_07_09_21_16_33.apk";
+                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_47_debug_testfeature_15_09_21_10_21.apk";
                 File app = new File(apk_path);
                 System.out.println("Stage build");
                 cap.setCapability("appPackage", "ua.fuel.debug");
@@ -51,6 +55,13 @@ public class AndroidSetUp {
             cap.setCapability("language", "RU");
             cap.setCapability("locale", "RU");
             cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
+// Удалить при мерже
+            service = new AppiumServiceBuilder()
+                    .withCapabilities(cap)
+                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+                    .withArgument(GeneralServerFlag.LOG_LEVEL,"error")
+                    .build();
+            service.start();
 //
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
             WebDriverRunner.setWebDriver(driver);
@@ -110,5 +121,6 @@ public class AndroidSetUp {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         closeWebDriver();
+        service.stop();
     }
 }
