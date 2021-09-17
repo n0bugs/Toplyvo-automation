@@ -74,7 +74,7 @@ public class AndroidSetUp {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             String value = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter(KEY);
             if (value.equalsIgnoreCase("stage")) {
-                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_46_debug_testfeature_07_09_21_16_33.apk";
+                String apk_path = "src/test/resources/TOPLYVO_UA_toplyvoDebug_2_7_47_debug_testfeature_15_09_21_10_21.apk";
                 File app = new File(apk_path);
                 System.out.println("Start on stage build");
                 capabilities.setCapability("appPackage", "ua.fuel.debug");
