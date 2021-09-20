@@ -8,18 +8,14 @@
     <artifactId>toplyvo.automation</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-
-        <!--REST ASSURED-->
-        <restassured.version>4.4.0</restassured.version>
         <!--END-->
         <aspectj.version>1.9.7</aspectj.version>
         <allure.version>2.14.0</allure.version>
-        <jackson.version>2.12.4</jackson.version>
-        <selenide.version>5.23.0</selenide.version>
+        <jackson.version>2.12.5</jackson.version>
+        <selenide.version>5.24.2</selenide.version>
         <allure.selenide.version>2.14.0</allure.selenide.version>
         <testng.version>7.4.0</testng.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 
         <suite.xml.file>Smoke_suite.xml</suite.xml.file>
         <suite.xml.file>Regretion_suite.xml</suite.xml.file>
@@ -59,72 +55,8 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide-appium</artifactId>
-            <version>1.6.7</version>
+            <version>1.6.8</version>
         </dependency>
-
-
-        <!--REST ASSURED-->
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${restassured.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-path</artifactId>
-            <version>${restassured.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>xml-path</artifactId>
-            <version>${restassured.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>${restassured.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
-            <version>1.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-rest-assured</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20210307</version>
-        </dependency>
-
-        <!--END-->
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -195,27 +127,8 @@
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
+            <version>2.4.0-b180830.0359</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>3.141.59</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-
 
     </dependencies>
 
